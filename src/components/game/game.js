@@ -1,8 +1,11 @@
 class Ship {
+  #hits = [];
   constructor(length) {
     this.length = length;
   }
-  hit() {}
+  hit(newHit) {
+    return [...this.#hits, newHit];
+  }
 }
 
 export { Ship };
