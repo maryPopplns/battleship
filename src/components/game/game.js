@@ -1,10 +1,10 @@
 class Ship {
-  #hits = [];
+  hits = [];
   constructor(length) {
     this.length = length;
   }
   hit(newHit) {
-    return [...this.#hits, newHit];
+    // return [...this.positions, newHit];
   }
 }
 
