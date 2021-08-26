@@ -1,3 +1,5 @@
-test('is ship a class', () => {
-  expect(1).toBe(true);
+import { Ship } from './game.js';
+
+test('contains method named "hit"', () => {
+  expect(new Ship()).toHaveProperty('hit');
 });
