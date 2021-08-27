@@ -1,9 +1,9 @@
 import { Ship } from './game.js';
 
 test('contains method named "hit"', () => {
-  expect(new Ship()).toHaveProperty('hit');
+  expect(Ship()).toHaveProperty('HIT');
 });
 
-test('method "hit" adds hit to our datastructure', () => {
-  expect(new Ship().hit(1)).toBe([1]);
+test.skip('"hit" method returns new Array', () => {
+  expect(Ship().hit(1)).toStrictEqual([1]);
 });
