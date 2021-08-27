@@ -7,8 +7,7 @@
     "test": "jest",
     "build": "webpack",
     "start": "webpack serve --open",
-    "add": "git add . && git commit",
-    "push": "git push origin $(git rev-parse --abbrev-ref HEAD)"
+    "add": "git add . && git commit && git push origin $(git rev-parse --abbrev-ref HEAD)"
   },
   "repository": {
     "type": "git",
