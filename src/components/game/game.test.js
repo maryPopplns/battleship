@@ -1,6 +1,6 @@
 import { Ship } from './game.js';
 
-test('invoking hit with an index updates ship.SHIP.hits correctly', () => {
+test('invoking Ships "hit" method with an index updates hits', () => {
   const SHIP = new Ship(5);
   SHIP.hit(0);
   expect(SHIP.hits).toStrictEqual([true, false, false, false, false]);
@@ -14,4 +14,16 @@ test('invoking hit with an index updates ship.SHIP.hits correctly', () => {
   expect(SHIP.hits).toStrictEqual([true, true, true, true, true]);
 });
 
-//todo make test for isSunk()
+test('Ships "is_sunk" method return the correct answer', () => {
+  const SHIP = new Ship(5);
+  SHIP.hit(4);
+  expect(SHIP.is_sunk()).toStrictEqual(false);
+  SHIP.hit(3);
+  expect(SHIP.is_sunk()).toStrictEqual(false);
+  SHIP.hit(2);
+  expect(SHIP.is_sunk()).toStrictEqual(false);
+  SHIP.hit(1);
+  expect(SHIP.is_sunk()).toStrictEqual(false);
+  SHIP.hit(0);
+  expect(SHIP.is_sunk()).toStrictEqual(true);
+});
