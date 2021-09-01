@@ -1,4 +1,4 @@
-import { Ship, Gameboard } from './game.js';
+import { Ship } from './game.js';
 
 describe('ship functionality', () => {
   test('invoking Ships "hit" method with an index updates storage correctly', () => {
@@ -30,33 +30,4 @@ describe('ship functionality', () => {
   });
 });
 
-describe('game_board functionality', () => {
-  test('board places ships at proper coordinates', () => {
-    const BOARD = new Gameboard();
-    BOARD.place_ship('carrier', ['a0', 'a2', 'a3', 'a4', 'a5']);
-    expect(BOARD.ships.carrier.position).toStrictEqual([
-      'a0',
-      'a2',
-      'a3',
-      'a4',
-      'a5',
-    ]);
-
-    BOARD.place_ship('battleship', ['b0', 'b2', 'b3', 'b4']);
-    expect(BOARD.ships.carrier.position).toStrictEqual([
-      'b0',
-      'b2',
-      'b3',
-      'b4',
-    ]);
-
-    BOARD.place_ship('destroyer', ['c0', 'c2', 'c3']);
-    expect(BOARD.ships.carrier.position).toStrictEqual(['c0', 'c2', 'c3']);
-
-    BOARD.place_ship('sub', ['d0', 'd2', 'd3']);
-    expect(BOARD.ships.carrier.position).toStrictEqual(['d0', 'd2', 'd3']);
-
-    BOARD.place_ship('patrol boat', ['e0', 'e2']);
-    expect(BOARD.ships.carrier.position).toStrictEqual(['e0', 'e2']);
-  });
-});
+describe('game_board functionality', () => {});
