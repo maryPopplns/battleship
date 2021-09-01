@@ -30,4 +30,6 @@ describe('ship functionality', () => {
   });
 });
 
-describe('game_board functionality', () => {});
+describe('game_board functionality', () => {
+  test('board places ships at proper coordinates', () => {});
+});
