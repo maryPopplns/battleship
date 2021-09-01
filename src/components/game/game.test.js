@@ -55,5 +55,8 @@ describe('game_board functionality', () => {
 
     BOARD.place_ship('sub', ['d0', 'd2', 'd3']);
     expect(BOARD.ships.carrier.position).toStrictEqual(['d0', 'd2', 'd3']);
+
+    BOARD.place_ship('patrol boat', ['e0', 'e2']);
+    expect(BOARD.ships.carrier.position).toStrictEqual(['e0', 'e2']);
   });
 });
