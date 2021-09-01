@@ -15,17 +15,17 @@ describe('ship functionality', () => {
     expect(SHIP.hits).toStrictEqual([true, true, true, true, true]);
   });
 
-  test('Ships "isSunk" method return the correct answer', () => {
+  test('Ships "is_sunk" method return the correct answer', () => {
     const SHIP = new Ship(5);
     SHIP.hit(4);
-    expect(SHIP.isSunk()).toStrictEqual(false);
+    expect(SHIP.is_sunk()).toStrictEqual(false);
     SHIP.hit(3);
-    expect(SHIP.isSunk()).toStrictEqual(false);
+    expect(SHIP.is_sunk()).toStrictEqual(false);
     SHIP.hit(2);
-    expect(SHIP.isSunk()).toStrictEqual(false);
+    expect(SHIP.is_sunk()).toStrictEqual(false);
     SHIP.hit(1);
-    expect(SHIP.isSunk()).toStrictEqual(false);
+    expect(SHIP.is_sunk()).toStrictEqual(false);
     SHIP.hit(0);
-    expect(SHIP.isSunk()).toStrictEqual(true);
+    expect(SHIP.is_sunk()).toStrictEqual(true);
   });
 });
