@@ -17,31 +17,6 @@ class Ship {
   }
 }
 
-class Gameboard {
-  ships = {
-    carrier : {
-      position: []
-      ship: new Ship(5)
-    }
-    battleship : {
-      position: []
-      ship: new Ship(4)
-    }
-    destroyer : {
-      position: []
-      ship: new Ship(3)
-    }
-    sub : {
-      position: []
-      ship: new Ship(3)
-    }
-    partolBoat : {
-      position: []
-      ship: new Ship(2)
-    }
-
-    place_ship
-  }
-}
+class Gameboard {}
 
 export { Ship, Gameboard };
