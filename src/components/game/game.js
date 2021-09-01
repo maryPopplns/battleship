@@ -12,9 +12,36 @@ class Ship {
     this.hits = this.#hit_reducer(this.hits, position_hit);
   }
   is_sunk() {
-    const is_sunk_answer = this.hits.every((position) => position === true);
-    return is_sunk_answer;
+    const is_sunk = this.hits.every((position) => position === true);
+    return is_sunk;
   }
 }
 
-export { Ship };
+class Gameboard {
+  ships = {
+    carrier : {
+      position: []
+      ship: new Ship(5)
+    }
+    battleship : {
+      position: []
+      ship: new Ship(4)
+    }
+    destroyer : {
+      position: []
+      ship: new Ship(3)
+    }
+    sub : {
+      position: []
+      ship: new Ship(3)
+    }
+    partolBoat : {
+      position: []
+      ship: new Ship(2)
+    }
+
+    place_ship
+  }
+}
+
+export { Ship, Gameboard };
