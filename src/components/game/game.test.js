@@ -41,5 +41,13 @@ describe('game_board functionality', () => {
       'a4',
       'a5',
     ]);
+
+    BOARD.place_ship('battleship', ['b0', 'b2', 'b3', 'b4']);
+    expect(BOARD.ships.carrier.position).toStrictEqual([
+      'b0',
+      'b2',
+      'b3',
+      'b4',
+    ]);
   });
 });
