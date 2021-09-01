@@ -52,5 +52,8 @@ describe('game_board functionality', () => {
 
     BOARD.place_ship('destroyer', ['c0', 'c2', 'c3']);
     expect(BOARD.ships.carrier.position).toStrictEqual(['c0', 'c2', 'c3']);
+
+    BOARD.place_ship('sub', ['d0', 'd2', 'd3']);
+    expect(BOARD.ships.carrier.position).toStrictEqual(['d0', 'd2', 'd3']);
   });
 });
