@@ -11,7 +11,7 @@ class Ship {
   hit(position_hit) {
     this.hits = this.#hitReducer(this.hits, position_hit);
   }
-  is_sunk() {
+  isSunk() {
     const is_sunk = this.hits.every((position) => position === true);
     return is_sunk;
   }
