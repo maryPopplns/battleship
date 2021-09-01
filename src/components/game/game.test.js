@@ -31,5 +31,15 @@ describe('ship functionality', () => {
 });
 
 describe('game_board functionality', () => {
-  test('board places ships at proper coordinates', () => {});
+  test('board places ships at proper coordinates', () => {
+    const BOARD = new Gameboard();
+    BOARD.place_ship('carrier', ['a0', 'a2', 'a3', 'a4', 'a5']);
+    expect(BOARD.ships.carrier.position).toStrictEqual([
+      'a0',
+      'a2',
+      'a3',
+      'a4',
+      'a5',
+    ]);
+  });
 });
