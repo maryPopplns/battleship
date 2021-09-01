@@ -17,4 +17,6 @@ class Ship {
   }
 }
 
+class Gameboard {}
+
 export { Ship };
