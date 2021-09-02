@@ -68,7 +68,15 @@ class Gameboard {
     }
   }
   all_sunk() {
-    return false;
+    let all_sunk = true;
+    for (let ship in this.ships) {
+      const all_sunk_call = this.ships[ship].ship.is_sunk();
+      if (all_sunk_call === false) {
+        all_sunk = false;
+        break;
+      }
+    }
+    return all_sunk;
   }
 }
 

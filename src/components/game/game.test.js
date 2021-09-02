@@ -119,9 +119,9 @@ describe('game_board functionality', () => {
     BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
     BOARD.place_ship('patrolBoat', ['e0', 'e1']);
     expect(BOARD.all_sunk()).toStrictEqual(false);
-    // for (let i = 0; i < SHIP_POSITIONS.length; i++) {
-    //   BOARD.receive_attack(SHIP_POSITIONS[i]);
-    // }
-    // expect(BOARD.all_sunk()).toStrictEqual(true);
+    for (let i = 0; i < SHIP_POSITIONS.length; i++) {
+      BOARD.receive_attack(SHIP_POSITIONS[i]);
+    }
+    expect(BOARD.all_sunk()).toStrictEqual(true);
   });
 });
