@@ -71,8 +71,8 @@ describe('game_board functionality', () => {
     BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
     expect(BOARD.ships.sub.position).toStrictEqual(['d0', 'd1', 'd2']);
 
-    BOARD.place_ship('partolBoat', ['e0', 'e1']);
-    expect(BOARD.ships.partolBoat.position).toStrictEqual(['e0', 'e1']);
+    BOARD.place_ship('patrolBoat', ['e0', 'e1']);
+    expect(BOARD.ships.patrolBoat.position).toStrictEqual(['e0', 'e1']);
   });
 
   test('"receive attack" method records hits', () => {
@@ -81,8 +81,13 @@ describe('game_board functionality', () => {
     BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
     BOARD.place_ship('destroyer', ['c0', 'c1', 'c2']);
     BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
-    BOARD.place_ship('partolBoat', ['e0', 'e1']);
+    BOARD.place_ship('patrolBoat', ['e0', 'e1']);
+
     BOARD.receive_attack('a1');
     expect(BOARD.ships.carrier.ship.is_hit(1)).toStrictEqual(true);
+    BOARD.receive_attack('a5');
+    expect(BOARD.misses.includes('a5')).toStrictEqual(true);
+    BOARD.receive_attack('b1');
+    expect(BOARD.ships.battleship.ship.is_hit(1)).toStrictEqual(true);
   });
 });

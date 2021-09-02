@@ -38,14 +38,34 @@ class Gameboard {
       position: [],
       ship: new Ship(3),
     },
-    partolBoat: {
+    patrolBoat: {
       position: [],
       ship: new Ship(2),
     },
   };
+  misses = [];
 
   place_ship(ship, input_position) {
     this.ships[ship].position = input_position;
+  }
+  #miss_reducer(input_position) {
+    return [...this.misses, input_position];
+  }
+  receive_attack(input_position) {
+    let miss = true;
+
+    for (let ship in this.ships) {
+      const WAS_HIT = this.ships[ship].position.includes(input_position);
+      if (WAS_HIT) {
+        const HIT_INDEX = this.ships[ship].position.indexOf(input_position);
+        this.ships[ship].ship.hit(HIT_INDEX);
+        miss = false;
+      }
+    }
+
+    if (miss) {
+      this.misses = this.#miss_reducer(input_position);
+    }
   }
 }
 
