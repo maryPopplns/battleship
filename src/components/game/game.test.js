@@ -76,13 +76,13 @@ describe('game_board functionality', () => {
   });
 
   test('"receive attack" method records hits', () => {
-    // const BOARD = new Gameboard();
-    // BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
-    // BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
-    // BOARD.place_ship('destroyer', ['c0', 'c1', 'c2']);
-    // BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
-    // BOARD.place_ship('partolBoat', ['e0', 'e1']);
-    // BOARD.receive_attack('a1');
-    // expect(BOARD.ships.carrier.ship.is_hit(1)).toStrictEqual(true);
+    const BOARD = new Gameboard();
+    BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
+    BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
+    BOARD.place_ship('destroyer', ['c0', 'c1', 'c2']);
+    BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
+    BOARD.place_ship('partolBoat', ['e0', 'e1']);
+    BOARD.receive_attack('a1');
+    expect(BOARD.ships.carrier.ship.is_hit(1)).toStrictEqual(true);
   });
 });
