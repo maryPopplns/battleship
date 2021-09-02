@@ -90,4 +90,38 @@ describe('game_board functionality', () => {
     BOARD.receive_attack('b1');
     expect(BOARD.ships.battleship.ship.is_hit(1)).toStrictEqual(true);
   });
+
+  //todo create tests for seeing if ships are sunk
+  test('"all_sunk" method reports correctly', () => {
+    const BOARD = new Gameboard();
+    const SHIP_POSITIONS = [
+      'a0',
+      'a1',
+      'a2',
+      'a3',
+      'a4',
+      'b0',
+      'b1',
+      'b2',
+      'b3',
+      'c0',
+      'c1',
+      'c2',
+      'd0',
+      'd1',
+      'd2',
+      'e0',
+      'e1',
+    ];
+    BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
+    BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
+    BOARD.place_ship('destroyer', ['c0', 'c1', 'c2']);
+    BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
+    BOARD.place_ship('patrolBoat', ['e0', 'e1']);
+    expect(BOARD.all_sunk()).toStrictEqual(false);
+    // for (let i = 0; i < SHIP_POSITIONS.length; i++) {
+    //   BOARD.receive_attack(SHIP_POSITIONS[i]);
+    // }
+    // expect(BOARD.all_sunk()).toStrictEqual(true);
+  });
 });
