@@ -44,7 +44,7 @@ describe('game_board functionality', () => {
     ]);
 
     BOARD.place_ship('battleship', ['b0', 'b2', 'b3', 'b4']);
-    expect(BOARD.ships.carrier.position).toStrictEqual([
+    expect(BOARD.ships.battleship.position).toStrictEqual([
       'b0',
       'b2',
       'b3',
@@ -52,12 +52,12 @@ describe('game_board functionality', () => {
     ]);
 
     BOARD.place_ship('destroyer', ['c0', 'c2', 'c3']);
-    expect(BOARD.ships.carrier.position).toStrictEqual(['c0', 'c2', 'c3']);
+    expect(BOARD.ships.destroyer.position).toStrictEqual(['c0', 'c2', 'c3']);
 
     BOARD.place_ship('sub', ['d0', 'd2', 'd3']);
-    expect(BOARD.ships.carrier.position).toStrictEqual(['d0', 'd2', 'd3']);
+    expect(BOARD.ships.sub.position).toStrictEqual(['d0', 'd2', 'd3']);
 
-    BOARD.place_ship('patrol boat', ['e0', 'e2']);
-    expect(BOARD.ships.carrier.position).toStrictEqual(['e0', 'e2']);
+    BOARD.place_ship('partolBoat', ['e0', 'e2']);
+    expect(BOARD.ships.partolBoat.position).toStrictEqual(['e0', 'e2']);
   });
 });

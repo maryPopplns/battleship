@@ -40,6 +40,10 @@ class Gameboard {
       ship: new Ship(2),
     },
   };
+
+  place_ship(ship, input_position) {
+    this.ships[ship].position = input_position;
+  }
 }
 
 export { Ship, Gameboard };
