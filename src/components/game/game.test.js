@@ -1,4 +1,5 @@
-import { Ship } from './game.js';
+import { Ship, Gameboard } from './game.js';
+import { describe, expect, test } from '@jest/globals';
 
 describe('ship functionality', () => {
   test('invoking Ships "hit" method with an index updates storage correctly', () => {
