@@ -67,6 +67,9 @@ class Gameboard {
       this.misses = this.#miss_reducer(input_position);
     }
   }
+  all_sunk() {
+    return false;
+  }
 }
 
 export { Ship, Gameboard };
