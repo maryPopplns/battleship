@@ -2,7 +2,7 @@ import { Ship, Gameboard, Player } from './game.js';
 import { describe, expect, test } from '@jest/globals';
 
 describe('ship functionality', () => {
-  test('invoking Ships "hit" method with an index updates storage correctly', () => {
+  test('"hit" method with an index updates storage correctly', () => {
     const SHIP = new Ship(5);
 
     SHIP.hit(0);
@@ -17,7 +17,7 @@ describe('ship functionality', () => {
     expect(SHIP.hits).toStrictEqual([true, true, true, true, true]);
   });
 
-  test('Ships "is_sunk" method returns the correct state', () => {
+  test('"is_sunk" method returns the correct state', () => {
     const SHIP = new Ship(5);
 
     SHIP.hit(4);
@@ -34,7 +34,7 @@ describe('ship functionality', () => {
 });
 
 describe('gameboard functionality', () => {
-  test('board places ships at proper coordinates', () => {
+  test('"place_ship" method places ships at proper coordinates', () => {
     const BOARD = new Gameboard();
     BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
 
@@ -112,15 +112,19 @@ describe('gameboard functionality', () => {
 });
 
 describe('player functionality', () => {
-  test('"attack" method on player marks enemy board correctly', () => {
+  test('"attack" method enemy board correctly', () => {
     const BOARD = new Gameboard();
     const PLAYER = new Player();
     BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
     BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
 
-    PLAYER.attack('a1');
-    expect(BOARD.ships.carrier.hits[1]).toStrictEqual(true);
-    PLAYER.attack('a5');
-    expect(BOARD.ships.carrier.misses.includes('a5')).toStrictEqual(true);
+    PLAYER.attack(BOARD, 'a0');
+    PLAYER.attack(BOARD, 'a1');
+    PLAYER.attack(BOARD, 'a2');
+    expect(BOARD.ships.carrier.ship.hits[0]).toStrictEqual(true);
+    expect(BOARD.ships.carrier.ship.hits[1]).toStrictEqual(true);
+    expect(BOARD.ships.carrier.ship.hits[2]).toStrictEqual(true);
+    PLAYER.attack(BOARD, 'a5');
+    expect(BOARD.misses.includes('a5')).toStrictEqual(true);
   });
 });

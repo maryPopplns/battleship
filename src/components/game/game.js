@@ -76,7 +76,15 @@ class Gameboard {
 }
 
 class Player {
-  attack(input_coordinate) {}
+  attacks = [];
+  #attack_reducer(input_coordinate) {
+    return [...this.attacks, input_coordinate];
+  }
+  attack(board, input_coordinate) {
+    if (!this.attacks.includes(input_coordinate))
+      board.receive_attack(input_coordinate);
+    this.attacks = this.#attack_reducer(input_coordinate);
+  }
 }
 
 export { Ship, Gameboard, Player };
