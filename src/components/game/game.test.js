@@ -112,7 +112,7 @@ describe('gameboard functionality', () => {
 });
 
 describe('player functionality', () => {
-  test('"attack" method enemy board correctly for human player', () => {
+  test('"attack" method enemy marks board correctly for human player', () => {
     const BOARD = new Gameboard();
     const PLAYER = new Player('human');
     BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
@@ -128,7 +128,7 @@ describe('player functionality', () => {
     expect(BOARD.misses.includes('a5')).toStrictEqual(true);
   });
 
-  test('"attack" method enemy board correctly for ai player', () => {
+  test('"attack" method marks enemy board correctly for ai player', () => {
     const BOARD = new Gameboard();
     const PLAYER = new Player('ai');
     BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);

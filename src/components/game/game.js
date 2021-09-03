@@ -81,9 +81,9 @@ class Player {
   }
   attacks = [];
 
-  // #ai_move {
+  #ai_move {
 
-  // }
+  }
   #human_move(board, input_coordinate) {
     board.receive_attack(input_coordinate);
     this.attacks = this.#attack_reducer(input_coordinate);
@@ -95,9 +95,9 @@ class Player {
     if (this.player === 'human') {
       this.#human_move(board, input_coordinate);
     }
-    // if (this.player === 'ai') {
-    //   this.#ai_move()
-    // }
+    if (this.player === 'ai') {
+      this.#ai_move()
+    }
   }
 }
 
