@@ -112,5 +112,11 @@ describe('gameboard functionality', () => {
 });
 
 describe('player functionality', () => {
-  test('"all_sunk" method reports correctly', () => {});
+  test('"attack" method on player marks enemy board correctly', () => {
+    // instantiate a board
+    // place  ships around
+    // instantiate a player
+    // have the player attacj the board and assert that those positions are marked as hit
+    expect().toStrictEqual(true);
+  });
 });
