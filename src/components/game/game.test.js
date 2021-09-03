@@ -31,7 +31,7 @@ describe('ship functionality', () => {
   });
 });
 
-describe('game_board functionality', () => {
+describe('gameboard functionality', () => {
   test('board places ships at proper coordinates', () => {
     const BOARD = new Gameboard();
     BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
@@ -109,4 +109,8 @@ describe('game_board functionality', () => {
     }
     expect(BOARD.all_sunk()).toStrictEqual(true);
   });
+});
+
+describe('player functionality', () => {
+  test('"all_sunk" method reports correctly', () => {});
 });
