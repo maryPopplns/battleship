@@ -11,9 +11,6 @@ class Ship {
   hit(position_hit) {
     this.hits = this.#hit_reducer(this.hits, position_hit);
   }
-  is_hit(input_position) {
-    return this.hits[input_position];
-  }
   is_sunk() {
     const is_sunk = this.hits.every((position) => position === true);
     return is_sunk;
@@ -53,7 +50,6 @@ class Gameboard {
   }
   receive_attack(input_position) {
     let miss = true;
-
     for (let ship in this.ships) {
       const WAS_HIT = this.ships[ship].position.includes(input_position);
       if (WAS_HIT) {
@@ -62,7 +58,6 @@ class Gameboard {
         miss = false;
       }
     }
-
     if (miss) {
       this.misses = this.#miss_reducer(input_position);
     }

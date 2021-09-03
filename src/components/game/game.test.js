@@ -29,20 +29,6 @@ describe('ship functionality', () => {
     SHIP.hit(0);
     expect(SHIP.is_sunk()).toStrictEqual(true);
   });
-
-  test('Ships "is_hit" method returns the correct state', () => {
-    const SHIP = new Ship(5);
-    SHIP.hit(0);
-    expect(SHIP.is_hit(0)).toStrictEqual(true);
-    SHIP.hit(1);
-    expect(SHIP.is_hit(1)).toStrictEqual(true);
-    SHIP.hit(2);
-    expect(SHIP.is_hit(2)).toStrictEqual(true);
-    SHIP.hit(3);
-    expect(SHIP.is_hit(3)).toStrictEqual(true);
-    SHIP.hit(4);
-    expect(SHIP.is_hit(4)).toStrictEqual(true);
-  });
 });
 
 describe('game_board functionality', () => {
@@ -84,14 +70,13 @@ describe('game_board functionality', () => {
     BOARD.place_ship('patrolBoat', ['e0', 'e1']);
 
     BOARD.receive_attack('a1');
-    expect(BOARD.ships.carrier.ship.is_hit(1)).toStrictEqual(true);
+    expect(BOARD.ships.carrier.ship.hits[1]).toStrictEqual(true);
     BOARD.receive_attack('a5');
     expect(BOARD.misses.includes('a5')).toStrictEqual(true);
     BOARD.receive_attack('b1');
-    expect(BOARD.ships.battleship.ship.is_hit(1)).toStrictEqual(true);
+    expect(BOARD.ships.battleship.ship.hits[1]).toStrictEqual(true);
   });
 
-  //todo create tests for seeing if ships are sunk
   test('"all_sunk" method reports correctly', () => {
     const BOARD = new Gameboard();
     const SHIP_POSITIONS = [
@@ -118,8 +103,8 @@ describe('game_board functionality', () => {
     BOARD.place_ship('destroyer', ['c0', 'c1', 'c2']);
     BOARD.place_ship('sub', ['d0', 'd1', 'd2']);
     BOARD.place_ship('patrolBoat', ['e0', 'e1']);
-    expect(BOARD.all_sunk()).toStrictEqual(false);
     for (let i = 0; i < SHIP_POSITIONS.length; i++) {
+      expect(BOARD.all_sunk()).toStrictEqual(false);
       BOARD.receive_attack(SHIP_POSITIONS[i]);
     }
     expect(BOARD.all_sunk()).toStrictEqual(true);
