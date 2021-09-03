@@ -80,14 +80,24 @@ class Player {
     this.player = player;
   }
   attacks = [];
+
+  // #ai_move {
+
+  // }
+  #human_move(input_coordinate) {
+    board.receive_attack(input_coordinate);
+    this.attacks = this.#attack_reducer(input_coordinate);
+  }
   #attack_reducer(input_coordinate) {
     return [...this.attacks, input_coordinate];
   }
   attack(board, input_coordinate) {
-    if (!this.attacks.includes(input_coordinate) && this.player === 'human') {
-      board.receive_attack(input_coordinate);
-      this.attacks = this.#attack_reducer(input_coordinate);
+    if (this.player === 'human') {
+      this.#human_move(input_coordinate);
     }
+    // if (this.player === 'ai') {
+    //   this.#ai_move()
+    // }
   }
 }
 
