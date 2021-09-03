@@ -42,24 +42,24 @@ class Gameboard {
   };
   misses = [];
 
-  place_ship(ship, input_position) {
-    this.ships[ship].position = input_position;
+  place_ship(ship, input_coordinate) {
+    this.ships[ship].position = input_coordinate;
   }
-  #miss_reducer(input_position) {
-    return [...this.misses, input_position];
+  #miss_reducer(input_coordinate) {
+    return [...this.misses, input_coordinate];
   }
-  receive_attack(input_position) {
+  receive_attack(input_coordinate) {
     let miss = true;
     for (let ship in this.ships) {
-      const WAS_HIT = this.ships[ship].position.includes(input_position);
+      const WAS_HIT = this.ships[ship].position.includes(input_coordinate);
       if (WAS_HIT) {
-        const HIT_INDEX = this.ships[ship].position.indexOf(input_position);
+        const HIT_INDEX = this.ships[ship].position.indexOf(input_coordinate);
         this.ships[ship].ship.hit(HIT_INDEX);
         miss = false;
       }
     }
     if (miss) {
-      this.misses = this.#miss_reducer(input_position);
+      this.misses = this.#miss_reducer(input_coordinate);
     }
   }
   all_sunk() {
@@ -75,6 +75,8 @@ class Gameboard {
   }
 }
 
-class Player {}
+class Player {
+  attack(input_coordinate) {}
+}
 
 export { Ship, Gameboard, Player };
