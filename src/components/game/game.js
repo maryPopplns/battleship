@@ -75,4 +75,6 @@ class Gameboard {
   }
 }
 
-export { Ship, Gameboard };
+class Player {}
+
+export { Ship, Gameboard, Player };

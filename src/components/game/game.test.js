@@ -1,4 +1,4 @@
-import { Ship, Gameboard } from './game.js';
+import { Ship, Gameboard, Player } from './game.js';
 import { describe, expect, test } from '@jest/globals';
 
 describe('ship functionality', () => {
