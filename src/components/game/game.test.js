@@ -114,7 +114,7 @@ describe('gameboard functionality', () => {
 describe('player functionality', () => {
   test('"attack" method enemy board correctly', () => {
     const BOARD = new Gameboard();
-    const PLAYER = new Player();
+    const PLAYER = new Player('human');
     BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
     BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
 

@@ -76,14 +76,18 @@ class Gameboard {
 }
 
 class Player {
+  constructor(player) {
+    this.player = player;
+  }
   attacks = [];
   #attack_reducer(input_coordinate) {
     return [...this.attacks, input_coordinate];
   }
   attack(board, input_coordinate) {
-    if (!this.attacks.includes(input_coordinate))
+    if (!this.attacks.includes(input_coordinate) && this.player === 'human') {
       board.receive_attack(input_coordinate);
-    this.attacks = this.#attack_reducer(input_coordinate);
+      this.attacks = this.#attack_reducer(input_coordinate);
+    }
   }
 }
 
