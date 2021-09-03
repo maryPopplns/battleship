@@ -81,8 +81,17 @@ class Player {
   }
   attacks = [];
 
-  #ai_move {
-
+  #ai_move(board) {
+    const LETTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+    const RANDOM_LETTER = LETTERS[Math.floor(Math.random() * 10)];
+    const RANDOM_NUM = Math.floor(Math.random() * 10);
+    const NEW_COORDINATE = `${RANDOM_LETTER}${RANDOM_NUM}`;
+    if (this.attacks.includes(NEW_COORDINATE)) {
+      this.#ai_move(board);
+    } else {
+      board.receive_attack(NEW_COORDINATE);
+      this.attacks = [...this.attacks, NEW_COORDINATE];
+    }
   }
   #human_move(board, input_coordinate) {
     board.receive_attack(input_coordinate);
@@ -96,7 +105,7 @@ class Player {
       this.#human_move(board, input_coordinate);
     }
     if (this.player === 'ai') {
-      this.#ai_move()
+      return this.#ai_move(board);
     }
   }
 }

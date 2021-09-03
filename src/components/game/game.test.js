@@ -135,5 +135,10 @@ describe('player functionality', () => {
     BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
 
     PLAYER.attack(BOARD);
+    expect(PLAYER.attacks.length).toStrictEqual(1);
+    for (let i = 0; i < 4; i++) {
+      PLAYER.attack(BOARD);
+    }
+    expect(PLAYER.attacks.length).toStrictEqual(5);
   });
 });
