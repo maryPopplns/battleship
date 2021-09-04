@@ -1,37 +1,5 @@
-import { Ship, Gameboard, Player } from './game.js';
+import { Gameboard } from './gameboard.js';
 import { describe, expect, test } from '@jest/globals';
-
-describe('ship functionality', () => {
-  test('"hit" method with an index updates storage correctly', () => {
-    const SHIP = new Ship(5);
-
-    SHIP.hit(0);
-    expect(SHIP.hits).toStrictEqual([true, false, false, false, false]);
-    SHIP.hit(1);
-    expect(SHIP.hits).toStrictEqual([true, true, false, false, false]);
-    SHIP.hit(2);
-    expect(SHIP.hits).toStrictEqual([true, true, true, false, false]);
-    SHIP.hit(3);
-    expect(SHIP.hits).toStrictEqual([true, true, true, true, false]);
-    SHIP.hit(4);
-    expect(SHIP.hits).toStrictEqual([true, true, true, true, true]);
-  });
-
-  test('"is_sunk" method returns the correct state', () => {
-    const SHIP = new Ship(5);
-
-    SHIP.hit(4);
-    expect(SHIP.is_sunk()).toStrictEqual(false);
-    SHIP.hit(3);
-    expect(SHIP.is_sunk()).toStrictEqual(false);
-    SHIP.hit(2);
-    expect(SHIP.is_sunk()).toStrictEqual(false);
-    SHIP.hit(1);
-    expect(SHIP.is_sunk()).toStrictEqual(false);
-    SHIP.hit(0);
-    expect(SHIP.is_sunk()).toStrictEqual(true);
-  });
-});
 
 describe('gameboard functionality', () => {
   test('"place_ship" method places ships at proper coordinates', () => {
@@ -108,37 +76,5 @@ describe('gameboard functionality', () => {
       BOARD.receive_attack(SHIP_POSITIONS[i]);
     }
     expect(BOARD.all_sunk()).toStrictEqual(true);
-  });
-});
-
-describe('player functionality', () => {
-  test('"attack" method enemy marks board correctly for human player', () => {
-    const BOARD = new Gameboard();
-    const PLAYER = new Player('human');
-    BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
-    BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
-
-    PLAYER.attack(BOARD, 'a0');
-    PLAYER.attack(BOARD, 'a1');
-    PLAYER.attack(BOARD, 'a2');
-    expect(BOARD.ships.carrier.ship.hits[0]).toStrictEqual(true);
-    expect(BOARD.ships.carrier.ship.hits[1]).toStrictEqual(true);
-    expect(BOARD.ships.carrier.ship.hits[2]).toStrictEqual(true);
-    PLAYER.attack(BOARD, 'a5');
-    expect(BOARD.misses.includes('a5')).toStrictEqual(true);
-  });
-
-  test('"attack" method marks enemy board correctly for ai player', () => {
-    const BOARD = new Gameboard();
-    const PLAYER = new Player('ai');
-    BOARD.place_ship('carrier', ['a0', 'a1', 'a2', 'a3', 'a4']);
-    BOARD.place_ship('battleship', ['b0', 'b1', 'b2', 'b3']);
-
-    PLAYER.attack(BOARD);
-    expect(PLAYER.attacks.length).toStrictEqual(1);
-    for (let i = 0; i < 4; i++) {
-      PLAYER.attack(BOARD);
-    }
-    expect(PLAYER.attacks.length).toStrictEqual(5);
   });
 });
