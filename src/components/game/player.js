@@ -16,35 +16,41 @@ export default class Player {
       }
     });
   })();
+  #ai_move() {
+    return this.remaining_moves[
+      Math.floor(Math.random() * this.remaining_moves.length)
+    ];
+  }
+  #filter_remaining_moves(coordinate) {
+    const REMAINING_MOVES_COPY = [...this.remaining_moves];
+    const REMAINING = REMAINING_MOVES_COPY.filter((remaining_move) => {
+      return remaining_move !== coordinate;
+    });
+    return REMAINING;
+  }
   #attack_reducer(input_coordinate) {
     return [...this.attacks, input_coordinate];
   }
   ai_attack(board) {
-    try {
-      if (this.player === 'ai') {
-        //todo get one of the coordinates from the remaining moves
-        //filter that value out of the current
-        this.attacks = this.#attack_reducer(coordinate);
-        board.receive_attack(coordinate);
-        return coordinate;
-      } else {
-        throw new Error('Player needs to be AI');
-      }
-    } catch (error) {
-      console.log(error);
+    if (this.player === 'ai') {
+      const COORDINATE = this.#ai_move();
+      this.remaining_moves = this.#filter_remaining_moves(COORDINATE);
+      this.attacks = this.#attack_reducer(COORDINATE);
+      board.receive_attack(COORDINATE);
+      return COORDINATE;
+    } else {
+      throw new Error('Player needs to be AI');
     }
   }
   human_attack(board, coordinate) {
-    try {
-      if (this.player === 'human') {
-        this.attacks = this.#attack_reducer(coordinate);
-        board.receive_attack(coordinate);
-        return coordinate;
-      } else {
-        throw new Error('Player needs to be a human');
-      }
-    } catch (error) {
-      console.log(error);
+    if (this.player === 'human') {
+      const FILTERED_MOVES = this.#filter_remaining_moves(coordinate);
+      this.remaining_moves = FILTERED_MOVES;
+      this.attacks = this.#attack_reducer(coordinate);
+      board.receive_attack(coordinate);
+      return coordinate;
+    } else {
+      throw new Error('Player needs to be a human');
     }
   }
 }
