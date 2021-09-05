@@ -1,4 +1,4 @@
-class Ship {
+export default class Ship {
   constructor(length) {
     this.hits = new Array(length).fill(false);
   }
@@ -16,5 +16,3 @@ class Ship {
     return is_sunk;
   }
 }
-
-export { Ship };

@@ -1,6 +1,6 @@
-import { Ship } from './ship.js';
+import Ship from './ship.js';
 
-class Gameboard {
+export default class Gameboard {
   ships = {
     carrier: {
       position: [],
@@ -57,5 +57,3 @@ class Gameboard {
     return all_sunk;
   }
 }
-
-export { Gameboard };

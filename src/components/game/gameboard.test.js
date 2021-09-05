@@ -1,4 +1,4 @@
-import { Gameboard } from './gameboard.js';
+import Gameboard from './gameboard.js';
 import { describe, expect, test } from '@jest/globals';
 
 describe('gameboard functionality', () => {

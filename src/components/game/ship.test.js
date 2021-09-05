@@ -1,4 +1,4 @@
-import { Ship } from './ship.js';
+import Ship from './ship.js';
 import { describe, expect, test } from '@jest/globals';
 
 describe('ship functionality', () => {

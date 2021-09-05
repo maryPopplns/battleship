@@ -1,4 +1,4 @@
-class Player {
+export default class Player {
   constructor(player) {
     this.player = player;
   }
@@ -18,7 +18,6 @@ class Player {
   #attack_reducer(input_coordinate) {
     return [...this.attacks, input_coordinate];
   }
-  //todo make a method that attacks the other board, can use this to test
   attack(board, coordinate) {
     if (this.player === 'ai') {
       coordinate = this.#ai_move(board);
@@ -27,5 +26,3 @@ class Player {
     board.receive_attack(coordinate);
   }
 }
-
-export { Player };
