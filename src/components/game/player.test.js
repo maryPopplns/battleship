@@ -33,10 +33,10 @@ describe('player functionality', () => {
   });
   test('human cant use ai_attack', () => {
     const PLAYER = new Player('human');
-    expect(PLAYER.ai_attack).toThrow();
+    expect(PLAYER.ai_attack()).toThrow();
   });
   test('ai cant use human_attack', () => {
     const PLAYER = new Player('ai');
-    expect(PLAYER.human_attack).toThrow();
+    expect(PLAYER.human_attack()).toThrow();
   });
 });
