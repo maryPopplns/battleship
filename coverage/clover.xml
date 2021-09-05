@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630883308996" clover="3.2.0">
-  <project timestamp="1630883308996" name="All files">
+<coverage generated="1630883680690" clover="3.2.0">
+  <project timestamp="1630883680690" name="All files">
     <metrics statements="56" coveredstatements="56" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="79" coveredelements="79" complexity="0" loc="56" ncloc="56" packages="1" files="3" classes="3"/>
     <file name="gameboard.js" path="/Users/poppins/web-dev/TOP/battleship/src/components/game/gameboard.js">
       <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
@@ -43,19 +43,19 @@
       <line num="29" count="104" type="stmt"/>
       <line num="32" count="104" type="stmt"/>
       <line num="35" count="103" type="cond" truecount="2" falsecount="0"/>
-      <line num="36" count="102" type="stmt"/>
-      <line num="37" count="102" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
       <line num="38" count="102" type="stmt"/>
       <line num="39" count="102" type="stmt"/>
       <line num="40" count="102" type="stmt"/>
-      <line num="42" count="1" type="stmt"/>
-      <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="47" count="2" type="stmt"/>
+      <line num="41" count="102" type="stmt"/>
+      <line num="42" count="102" type="stmt"/>
+      <line num="45" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="46" count="1" type="stmt"/>
       <line num="48" count="2" type="stmt"/>
       <line num="49" count="2" type="stmt"/>
       <line num="50" count="2" type="stmt"/>
       <line num="51" count="2" type="stmt"/>
-      <line num="53" count="1" type="stmt"/>
+      <line num="52" count="2" type="stmt"/>
     </file>
     <file name="ship.js" path="/Users/poppins/web-dev/TOP/battleship/src/components/game/ship.js">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>

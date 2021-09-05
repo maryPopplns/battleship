@@ -32,25 +32,23 @@ export default class Player {
     return [...this.moves, input_coordinate];
   }
   ai_attack(board) {
-    if (this.player === 'ai') {
-      const COORDINATE = this.#ai_move();
-      this.remaining_moves = this.#filter_remaining_moves(COORDINATE);
-      this.moves = this.#attack_reducer(COORDINATE);
-      board.receive_attack(COORDINATE);
-      return COORDINATE;
-    } else {
+    if (this.player !== 'ai') {
       throw new Error('Player needs to be AI');
     }
+    const COORDINATE = this.#ai_move();
+    this.remaining_moves = this.#filter_remaining_moves(COORDINATE);
+    this.moves = this.#attack_reducer(COORDINATE);
+    board.receive_attack(COORDINATE);
+    return COORDINATE;
   }
   human_attack(board, coordinate) {
-    if (this.player === 'human') {
-      const FILTERED_MOVES = this.#filter_remaining_moves(coordinate);
-      this.remaining_moves = FILTERED_MOVES;
-      this.moves = this.#attack_reducer(coordinate);
-      board.receive_attack(coordinate);
-      return coordinate;
-    } else {
+    if (this.player !== 'human') {
       throw new Error('Player needs to be a human');
     }
+    const FILTERED_MOVES = this.#filter_remaining_moves(coordinate);
+    this.remaining_moves = FILTERED_MOVES;
+    this.moves = this.#attack_reducer(coordinate);
+    board.receive_attack(coordinate);
+    return coordinate;
   }
 }
