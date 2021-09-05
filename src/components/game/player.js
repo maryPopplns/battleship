@@ -10,7 +10,8 @@ export default class Player {
   ai_attack(board) {
     const LETTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
     try {
-      if (this.player === 'human') {
+      if (this.player === 'ai') {
+        //todo get one of the coordinates from the remaining moves
         this.attacks = this.#attack_reducer(coordinate);
         board.receive_attack(coordinate);
         return coordinate;
