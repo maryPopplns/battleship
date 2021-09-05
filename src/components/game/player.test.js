@@ -19,4 +19,11 @@ describe('player functionality', () => {
     expect(MOCK_RECIEVE_ATTACKS).toHaveBeenCalledWith('a2');
     expect(MOCK_RECIEVE_ATTACKS).toHaveBeenCalledTimes(2);
   });
+  test('"attack" method enemy marks board correctly for ai player', () => {
+    const PLAYER = new Player('ai');
+    const BOARD = new Gameboard();
+    PLAYER.attack(BOARD);
+    PLAYER.attack(BOARD);
+    expect(MOCK_RECIEVE_ATTACKS).toHaveBeenCalledTimes(2);
+  });
 });
