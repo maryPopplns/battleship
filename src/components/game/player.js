@@ -2,7 +2,7 @@ export default class Player {
   constructor(player) {
     this.player = player;
   }
-  attacks = [];
+  moves = [];
   remaining_moves = [];
 
   #remaining_moves_reducer(coordinate) {
@@ -29,13 +29,13 @@ export default class Player {
     return REMAINING;
   }
   #attack_reducer(input_coordinate) {
-    return [...this.attacks, input_coordinate];
+    return [...this.moves, input_coordinate];
   }
   ai_attack(board) {
     if (this.player === 'ai') {
       const COORDINATE = this.#ai_move();
       this.remaining_moves = this.#filter_remaining_moves(COORDINATE);
-      this.attacks = this.#attack_reducer(COORDINATE);
+      this.moves = this.#attack_reducer(COORDINATE);
       board.receive_attack(COORDINATE);
       return COORDINATE;
     } else {
@@ -46,7 +46,7 @@ export default class Player {
     if (this.player === 'human') {
       const FILTERED_MOVES = this.#filter_remaining_moves(coordinate);
       this.remaining_moves = FILTERED_MOVES;
-      this.attacks = this.#attack_reducer(coordinate);
+      this.moves = this.#attack_reducer(coordinate);
       board.receive_attack(coordinate);
       return coordinate;
     } else {
