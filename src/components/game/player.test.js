@@ -43,4 +43,12 @@ describe('player functionality', () => {
       PLAYER.human_attack();
     }).toThrowError(new Error('Player needs to be a human'));
   });
+  test('ai generates unique valid values for 100 invokations', () => {
+    const PLAYER = new Player('ai');
+    const BOARD = new Gameboard();
+    for (let i = 0; i < 50; i++) {
+      PLAYER.ai_attack(BOARD);
+    }
+    expect(Player.remaining_moves.length).toStrictEqual(50);
+  });
 });
