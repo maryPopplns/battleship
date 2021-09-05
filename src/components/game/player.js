@@ -24,5 +24,6 @@ export default class Player {
     }
     this.attacks = this.#attack_reducer(coordinate);
     board.receive_attack(coordinate);
+    return coordinate;
   }
 }

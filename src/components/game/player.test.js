@@ -1,4 +1,4 @@
-import { expect, describe, test } from '@jest/globals';
+import { beforeEach, expect, describe, test } from '@jest/globals';
 import Player from './player.js';
 import Gameboard from './gameboard.js';
 
@@ -10,14 +10,18 @@ jest.mock('./gameboard', () => {
 });
 
 describe('player functionality', () => {
+  beforeEach(() => {
+    MOCK_RECIEVE_ATTACKS.mockClear();
+    Gameboard.mockClear();
+  });
   test('"attack" method enemy marks board correctly for human player', () => {
     const PLAYER = new Player('human');
     const BOARD = new Gameboard();
-    PLAYER.attack(BOARD, 'a1');
-    expect(MOCK_RECIEVE_ATTACKS).toHaveBeenCalledWith('a1');
-    PLAYER.attack(BOARD, 'a2');
-    expect(MOCK_RECIEVE_ATTACKS).toHaveBeenCalledWith('a2');
+    const FIRST_ATTACK = PLAYER.attack(BOARD, 'a1');
+    const SECOND_ATTACK = PLAYER.attack(BOARD, 'a2');
     expect(MOCK_RECIEVE_ATTACKS).toHaveBeenCalledTimes(2);
+    expect(FIRST_ATTACK).toStrictEqual('a1');
+    expect(SECOND_ATTACK).toStrictEqual('a2');
   });
   test('"attack" method enemy marks board correctly for ai player', () => {
     const PLAYER = new Player('ai');
