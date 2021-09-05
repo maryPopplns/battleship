@@ -1,5 +1,4 @@
 import Gameboard from './gameboard.js';
-import { describe, expect, test } from '@jest/globals';
 
 describe('gameboard functionality', () => {
   test('"place_ship" method places ships at proper coordinates', () => {

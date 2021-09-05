@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack",
     "start": "webpack serve --open",
     "add": "git add . && git commit && git push origin $(git rev-parse --abbrev-ref HEAD)"
