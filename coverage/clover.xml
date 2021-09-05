@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630882317173" clover="3.2.0">
-  <project timestamp="1630882317173" name="All files">
+<coverage generated="1630883308996" clover="3.2.0">
+  <project timestamp="1630883308996" name="All files">
     <metrics statements="56" coveredstatements="56" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="79" coveredelements="79" complexity="0" loc="56" ncloc="56" packages="1" files="3" classes="3"/>
     <file name="gameboard.js" path="/Users/poppins/web-dev/TOP/battleship/src/components/game/gameboard.js">
       <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
@@ -27,27 +27,27 @@
     </file>
     <file name="player.js" path="/Users/poppins/web-dev/TOP/battleship/src/components/game/player.js">
       <metrics statements="29" coveredstatements="29" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="5" count="4" type="stmt"/>
-      <line num="6" count="4" type="stmt"/>
-      <line num="9" count="400" type="stmt"/>
-      <line num="11" count="4" type="stmt"/>
-      <line num="12" count="4" type="stmt"/>
-      <line num="13" count="4" type="stmt"/>
-      <line num="14" count="40" type="stmt"/>
-      <line num="15" count="400" type="stmt"/>
-      <line num="20" count="2" type="stmt"/>
-      <line num="25" count="4" type="stmt"/>
-      <line num="26" count="4" type="stmt"/>
-      <line num="27" count="398" type="stmt"/>
-      <line num="29" count="4" type="stmt"/>
-      <line num="32" count="4" type="stmt"/>
-      <line num="35" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="36" count="2" type="stmt"/>
-      <line num="37" count="2" type="stmt"/>
-      <line num="38" count="2" type="stmt"/>
-      <line num="39" count="2" type="stmt"/>
-      <line num="40" count="2" type="stmt"/>
+      <line num="3" count="5" type="stmt"/>
+      <line num="5" count="5" type="stmt"/>
+      <line num="6" count="5" type="stmt"/>
+      <line num="9" count="500" type="stmt"/>
+      <line num="11" count="5" type="stmt"/>
+      <line num="12" count="5" type="stmt"/>
+      <line num="13" count="5" type="stmt"/>
+      <line num="14" count="50" type="stmt"/>
+      <line num="15" count="500" type="stmt"/>
+      <line num="20" count="102" type="stmt"/>
+      <line num="25" count="104" type="stmt"/>
+      <line num="26" count="104" type="stmt"/>
+      <line num="27" count="5448" type="stmt"/>
+      <line num="29" count="104" type="stmt"/>
+      <line num="32" count="104" type="stmt"/>
+      <line num="35" count="103" type="cond" truecount="2" falsecount="0"/>
+      <line num="36" count="102" type="stmt"/>
+      <line num="37" count="102" type="stmt"/>
+      <line num="38" count="102" type="stmt"/>
+      <line num="39" count="102" type="stmt"/>
+      <line num="40" count="102" type="stmt"/>
       <line num="42" count="1" type="stmt"/>
       <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="47" count="2" type="stmt"/>
