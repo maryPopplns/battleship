@@ -12,7 +12,6 @@ export default class Ship {
     this.hits = this.#hit_reducer(this.hits, position_hit);
   }
   is_sunk() {
-    const is_sunk = this.hits.every((position) => position === true);
-    return is_sunk;
+    return this.hits.every((position) => position === true);
   }
 }

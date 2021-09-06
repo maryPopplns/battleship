@@ -46,21 +46,13 @@ describe('player functionality', () => {
   test('ai generates unique valid values for 100 invokations', () => {
     const PLAYER = new Player('ai');
     const BOARD = new Gameboard();
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 100; i++) {
       PLAYER.ai_attack(BOARD);
     }
-    expect(PLAYER.remaining_moves.length).toStrictEqual(75);
-    for (let i = 0; i < 25; i++) {
-      PLAYER.ai_attack(BOARD);
-    }
-    expect(PLAYER.remaining_moves.length).toStrictEqual(50);
-    for (let i = 0; i < 25; i++) {
-      PLAYER.ai_attack(BOARD);
-    }
-    expect(PLAYER.remaining_moves.length).toStrictEqual(25);
-    for (let i = 0; i < 25; i++) {
-      PLAYER.ai_attack(BOARD);
-    }
-    expect(PLAYER.remaining_moves.length).toStrictEqual(0);
+    const UNIQUE_VALUES = Array.from(new Set(PLAYER.moves));
+    expect(UNIQUE_VALUES.length).toStrictEqual(100);
+    UNIQUE_VALUES.map((coordinate) => {
+      expect(coordinate).toMatch(/[a-j][0-9]/);
+    });
   });
 });
