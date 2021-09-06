@@ -1,4 +1,3 @@
-export default function homepage = () => {
+export default function homepage() {
   console.log('homepage');
-};
-
+}
