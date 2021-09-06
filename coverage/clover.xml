@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630899028561" clover="3.2.0">
-  <project timestamp="1630899028561" name="All files">
+<coverage generated="1630901150857" clover="3.2.0">
+  <project timestamp="1630901150857" name="All files">
     <metrics statements="55" coveredstatements="55" conditionals="10" coveredconditionals="10" methods="13" coveredmethods="13" elements="78" coveredelements="78" complexity="0" loc="55" ncloc="55" packages="1" files="3" classes="3"/>
     <file name="gameboard.js" path="/Users/poppins/web-dev/TOP/battleship/src/components/game/gameboard.js">
       <metrics statements="20" coveredstatements="20" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
