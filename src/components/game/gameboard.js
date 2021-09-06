@@ -25,8 +25,8 @@ export default class Gameboard {
   };
   misses = [];
 
-  place_ship(ship, input_coordinate) {
-    this.ships[ship].position = input_coordinate;
+  place_ship(ship, input_coordinates) {
+    this.ships[ship].position = input_coordinates;
   }
   #miss_reducer(input_coordinate) {
     return [...this.misses, input_coordinate];
@@ -46,14 +46,14 @@ export default class Gameboard {
     }
   }
   all_sunk() {
-    let all_sunk = true;
+    let is_all_sunk = true;
     for (let ship in this.ships) {
       const all_sunk_call = this.ships[ship].ship.is_sunk();
       if (all_sunk_call === false) {
-        all_sunk = false;
+        is_all_sunk = false;
         break;
       }
     }
-    return all_sunk;
+    return is_all_sunk;
   }
 }
