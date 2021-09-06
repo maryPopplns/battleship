@@ -43,6 +43,16 @@ describe('gameboard functionality', () => {
     expect(BOARD.ships.battleship.ship.hits[1]).toStrictEqual(true);
   });
 
+  test('gameboard tracks hits correctly', () => {
+    const POSITIONS = ['a0', 'a1', 'a2', 'a3', 'a4'];
+    const BOARD = new Gameboard();
+    BOARD.place_ship('carrier', POSITIONS);
+    for (let i = 0; i < 5; i++) {
+      BOARD.receive_attack(POSITIONS[i]);
+    }
+    expect(BOARD.hits).toStrictEqual(POSITIONS);
+  });
+
   test('"all_sunk" method reports correctly', () => {
     const BOARD = new Gameboard();
     const SHIP_POSITIONS = [

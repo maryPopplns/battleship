@@ -23,19 +23,24 @@ export default class Gameboard {
       ship: new Ship(2),
     },
   };
+  hits = [];
   misses = [];
 
   place_ship(ship, input_coordinates) {
     this.ships[ship].position = input_coordinates;
   }
   #miss_reducer(input_coordinate) {
-    return [...this.misses, input_coordinate];
+    return [...this.misses, input_coordinate].sort();
+  }
+  #hit_reducer(input_coordinate) {
+    return [...this.hits, input_coordinate].sort();
   }
   receive_attack(input_coordinate) {
     let miss = true;
     for (let ship in this.ships) {
       const WAS_HIT = this.ships[ship].position.includes(input_coordinate);
       if (WAS_HIT) {
+        this.hits = this.#hit_reducer(input_coordinate);
         const HIT_INDEX = this.ships[ship].position.indexOf(input_coordinate);
         this.ships[ship].ship.hit(HIT_INDEX);
         miss = false;
