@@ -1,5 +1,6 @@
 import './index.css';
-import GAME_LOOP from './components/game/GAME_LOOP.js';
+import gameloop from './components/game/GAME_LOOP.js';
+import homepage from './components/game/GAME_LOOP.js';
 
-const GAME = GAME_LOOP();
-console.log(GAME);
+const GAME = gameloop();
+homepage();

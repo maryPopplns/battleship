@@ -1,7 +1,7 @@
 import Gameboard from './gameboard.js';
 import Player from './player.js';
 
-const GAME_LOOP = () => {
+export default function gameloop() {
   const PLAYER1 = new Player('human');
   const PLAYER2 = new Player('ai');
   const PLAYER1_GAMEBOARD = new Gameboard();
@@ -16,10 +16,4 @@ const GAME_LOOP = () => {
     board.place_ship('patrolBoat', ['e0', 'e1']);
   });
   //todo remove boilerplate so ships can be manually placed
-
-  const TURN = (coordinate) => {
-    PLAYER1.human_attack(PLAYER2_GAMEBOARD, coordinate);
-  };
-  return TURN;
-};
-export default GAME_LOOP;
+}
