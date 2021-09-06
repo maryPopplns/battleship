@@ -16,4 +16,6 @@ export default function gameloop() {
     board.place_ship('patrolBoat', ['e0', 'e1']);
   });
   //todo remove boilerplate so ships can be manually placed
+
+  return { PLAYER1, PLAYER2 };
 }

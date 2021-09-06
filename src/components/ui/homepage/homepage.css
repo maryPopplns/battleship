@@ -1,1 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+}
 
+#bs_heading {
+  display: grid;
+  grid-template-columns: repeat(35, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  height: 40em;
+  width: 70em;
+}
+
+#start_button {
+  display: grid;
+  grid-template-columns: repeat(35, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  height: 10em;
+  width: 70em;
+}
+
+.tile {
+  border: 1px solid black;
+}
