@@ -15,18 +15,35 @@ const CARRIER = {
     2701, 2704, 2705, 2708, 2709, 2712, 2713, 2716, 2717, 2720, 2721, 2724,
     2725,
   ],
-  gun_barrel: [1947, 2025, 2053, 2058, 2063],
   dark_gray: [
-    1517, 1518, 1929, 1930, 1941, 1942, 2069, 2070, 2081, 2082, 2124, 2129,
-    2134, 2092, 2093,
+    1168, 1238, 1308, 1517, 1518, 1929, 1930, 1941, 1942, 1947, 2025, 2053,
+    2058, 2063, 2069, 2070, 2081, 2082, 2124, 2129, 2134, 2092, 2093,
   ],
-  light_gray: [],
+  light_gray: [1097, 1099],
+  ship_light: [1098],
+  surrounding_water_dark: [
+    2545, 2616, 2686, 2690, 2691, 2694, 2695, 2698, 2699, 2702, 2703, 2706,
+    2707, 2710, 2711, 2714, 2715, 2718, 2719, 2722, 2723, 2587, 2657, 2727,
+    2449, 2518, 2519, 2588, 2658,
+  ],
+  surrounding_water_light: [
+    2589, 2615, 2659, 2684, 2685, 2728, 2729, 2753, 2754, 2755, 2798, 2799,
+  ],
 };
 
 const DESTROYER = {
-  black_outline: [1474, 1491, 1545, 1561, 1616, 1631, 1687, 1701],
+  black_outline: [
+    1194, 1198, 1211, 1265, 1269, 1280, 1474, 1491, 1492, 1545, 1561, 1616,
+    1631, 1687, 1701,
+  ],
   hull: [1688, 1691, 1692, 1695, 1696, 1699, 1700],
-  light_gray: [],
+  dark_gray: [785, 855, 925, 995, 1266, 1270, 1273, 1274, 1276, 1279],
+  light_gray: [714, 716, 1133, 1137, 1272, 1275, 1277],
+  ship_light: [715],
+  surrounding_water_dark: [1689, 1690, 1693, 1694, 1697, 1698],
+  surrounding_water_light: [
+    1632, 1685, 1686, 1702, 1703, 1754, 1755, 1773, 1774,
+  ],
 };
 
 (function carrier_ez_loader() {
@@ -56,6 +73,7 @@ const DESTROYER = {
   ITERATOR(2618, 2655, HULL);
 
   const DARK_GRAY = CARRIER.dark_gray;
+  ITERATOR(1134, 1136, DARK_GRAY);
   ITERATOR(2086, 2088, DARK_GRAY);
   ITERATOR(2156, 2158, DARK_GRAY);
   ITERATOR(2162, 2164, DARK_GRAY);
@@ -64,6 +82,9 @@ const DESTROYER = {
 
   const LIGHT_GRAY = CARRIER.light_gray;
   ITERATOR(2335, 2378, LIGHT_GRAY);
+
+  const SURROUNDING_WATER_DARK = CARRIER.surrounding_water_dark;
+  ITERATOR(2756, 2797, SURROUNDING_WATER_DARK);
 })();
 
 (function destroyer_ez_loader() {
@@ -76,6 +97,17 @@ const DESTROYER = {
 
   const LIGHT_GRAY = DESTROYER.light_gray;
   ITERATOR(1546, 1560, LIGHT_GRAY);
+  ITERATOR(1063, 1067, LIGHT_GRAY);
+  ITERATOR(1202, 1207, LIGHT_GRAY);
+  ITERATOR(1342, 1347, LIGHT_GRAY);
+
+  const DARK_GRAY = DESTROYER.dark_gray;
+  ITERATOR(1334, 1336, DARK_GRAY);
+  ITERATOR(1338, 1340, DARK_GRAY);
+  ITERATOR(1349, 1351, DARK_GRAY);
+
+  const SURROUNDING_WATER_DARK = DESTROYER.surrounding_water_dark;
+  ITERATOR(1756, 1772, SURROUNDING_WATER_DARK);
 })();
 
 export { CARRIER, DESTROYER };

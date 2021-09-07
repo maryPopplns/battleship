@@ -1,3 +1,5 @@
+@import './animator.css';
+
 .ship_hull_outline {
   background-color: black;
 }
@@ -6,8 +8,9 @@
   background-color: #595555;
 }
 
-.gun_barrel {
-  background: #a23131;
+.ship_light {
+  background: #d52b2b;
+  animation: opacity 0.75s linear infinite;
 }
 
 .light_gray {

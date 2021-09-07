@@ -7,10 +7,10 @@ export default function render_tiles() {
   for (let i = 0; i < 2800; i++) {
     const TILE = document.createElement('div');
     TILE.addEventListener('click', (e) => {
-      e.target.classList.add('ship_hull');
+      e.target.classList.add('dark_gray');
     });
     TILE.addEventListener('dblclick', (e) => {
-      e.target.classList.remove('ship_hull');
+      e.target.classList.remove('dark_gray');
     });
     TILE.id = i;
     TILE.classList = 'tile water';

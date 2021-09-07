@@ -1,0 +1,109 @@
+:root {
+  --opacity-00: 1;
+  --opacity-05: 0.98;
+  --opacity-10: 0.96;
+  --opacity-15: 0.94;
+  --opacity-20: 0.92;
+  --opacity-25: 0.9;
+  --opacity-30: 0.88;
+  --opacity-35: 0.86;
+  --opacity-40: 0.84;
+  --opacity-45: 0.82;
+  --opacity-50: 0.8;
+  --opacity-55: 0.82;
+  --opacity-60: 0.84;
+  --opacity-65: 0.86;
+  --opacity-70: 0.88;
+  --opacity-75: 0.9;
+  --opacity-80: 0.92;
+  --opacity-85: 0.94;
+  --opacity-90: 0.96;
+  --opacity-95: 0.98;
+  --opacity-100: 1;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: var(--opacity-00);
+  }
+
+  5% {
+    opacity: var(--opacity-05);
+  }
+
+  10% {
+    opacity: var(--opacity-10);
+  }
+
+  15% {
+    opacity: var(--opacity-15);
+  }
+
+  20% {
+    opacity: var(--opacity-20);
+  }
+
+  25% {
+    opacity: var(--opacity-25);
+  }
+
+  30% {
+    opacity: var(--opacity-30);
+  }
+
+  35% {
+    opacity: var(--opacity-35);
+  }
+
+  40% {
+    opacity: var(--opacity-40);
+  }
+
+  45% {
+    opacity: var(--opacity-45);
+  }
+
+  50% {
+    opacity: var(--opacity-50);
+  }
+
+  55% {
+    opacity: var(--opacity-55);
+  }
+
+  60% {
+    opacity: var(--opacity-60);
+  }
+
+  65% {
+    opacity: var(--opacity-65);
+  }
+
+  70% {
+    opacity: var(--opacity-70);
+  }
+
+  75% {
+    opacity: var(--opacity-75);
+  }
+
+  80% {
+    opacity: var(--opacity-80);
+  }
+
+  85% {
+    opacity: var(--opacity-85);
+  }
+
+  90% {
+    opacity: var(--opacity-90);
+  }
+
+  95% {
+    opacity: var(--opacity-95);
+  }
+
+  100% {
+    opacity: var(--opacity-100);
+  }
+}
