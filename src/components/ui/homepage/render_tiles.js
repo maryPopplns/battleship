@@ -7,25 +7,19 @@ export default function render_tiles() {
   for (let i = 0; i < 2800; i++) {
     const TILE = document.createElement('div');
     TILE.addEventListener('click', (e) => {
-      e.target.style.backgroundColor = 'red';
+      e.target.classList.add('ship_hull');
     });
     TILE.addEventListener('dblclick', (e) => {
-      e.target.style.backgroundColor = 'rgb(60, 86, 150)';
+      e.target.classList.remove('ship_hull');
     });
     TILE.id = i;
-    TILE.classList = 'tile';
+    TILE.classList = 'tile water';
     HEADING.append(TILE);
   }
   for (let i = 0; i < 700; i++) {
     const TILE = document.createElement('div');
-    TILE.addEventListener('click', (e) => {
-      e.target.style.backgroundColor = 'red';
-    });
-    TILE.addEventListener('dblclick', (e) => {
-      e.target.style.backgroundColor = 'rgb(185, 124, 185)';
-    });
     TILE.id = `start_${i}`;
-    TILE.classList = 'tile start';
+    TILE.classList = 'tile start_background';
     START.append(TILE);
   }
   MAIN.append(HEADING);

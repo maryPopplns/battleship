@@ -1,7 +1,8 @@
 body {
-  background-color: black;
   display: flex;
   justify-content: center;
+  background-color: black;
+  cursor: none;
 }
 
 #bs_heading {
@@ -10,11 +11,10 @@ body {
   grid-template-rows: repeat(40, 1fr);
   height: 40em;
   width: 70em;
-  background-color: rgb(60, 86, 150);
+  background-color: #00006a;
 }
 
 #start_button {
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
   grid-template-rows: repeat(10, 1fr);
@@ -22,10 +22,22 @@ body {
   width: 70em;
 }
 
+.tile:hover {
+  background: rgb(132, 255, 23);
+}
+
 .tile {
   border: 1px solid black;
 }
 
-.start {
-  background-color: rgb(185, 124, 185);
+.start_background {
+  background-color: black;
+}
+
+.ship_hull {
+  background-color: #9da29b;
+}
+
+.start_text {
+  background-color: #ac971b;
 }

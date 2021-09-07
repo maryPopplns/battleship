@@ -1,3 +1,5 @@
+import ITERATOR from './iterator.js';
+
 const START = {
   s: [146, 147, 216, 217, 434, 435, 504, 505],
   t1: [
@@ -17,12 +19,6 @@ const START = {
     689,
   ],
   all: [],
-};
-
-const ITERATOR = (min, max, target_array) => {
-  for (let i = min; i < max + 1; i++) {
-    target_array.push(i);
-  }
 };
 
 (function ez_loader() {
