@@ -3,5 +3,17 @@
 }
 
 .ship_hull {
-  background-color: #9da29b;
+  background-color: #595555;
+}
+
+.gun_barrel {
+  background: #a23131;
+}
+
+.light_gray {
+  background: #6c6c6c;
+}
+
+.dark_gray {
+  background: #393939;
 }

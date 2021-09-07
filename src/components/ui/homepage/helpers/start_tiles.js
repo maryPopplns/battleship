@@ -1,4 +1,4 @@
-import ITERATOR from './iterator.js';
+import { ITERATOR } from './helpers.js';
 
 const START = {
   s: [146, 147, 216, 217, 434, 435, 504, 505],

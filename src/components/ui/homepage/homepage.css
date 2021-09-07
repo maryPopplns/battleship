@@ -32,12 +32,12 @@ body {
   border: 1px solid black;
 }
 
-.start_background {
-  background-color: black;
+.start {
+  border: 1px solid black;
 }
 
-.ship_hull {
-  background-color: #9da29b;
+.start_background {
+  background-color: black;
 }
 
 .start_text {

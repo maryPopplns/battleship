@@ -19,7 +19,7 @@ export default function render_tiles() {
   for (let i = 0; i < 700; i++) {
     const TILE = document.createElement('div');
     TILE.id = `start_${i}`;
-    TILE.classList = 'tile start_background';
+    TILE.classList = 'tile start start_background';
     START.append(TILE);
   }
   MAIN.append(HEADING);
