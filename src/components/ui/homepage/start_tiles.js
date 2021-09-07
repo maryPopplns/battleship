@@ -12,7 +12,10 @@ const START = {
     182, 183, 190, 191, 252, 253, 260, 261, 462, 463, 470, 471, 532, 533, 540,
     541, 602, 603, 610, 611, 672, 673, 680, 681,
   ],
-  t2: [198, 199, 268, 269, 338, 339, 408, 409, 478, 479, 548, 549, 618, 619],
+  t2: [
+    198, 199, 268, 269, 338, 339, 408, 409, 478, 479, 548, 549, 618, 619, 688,
+    689,
+  ],
   all: [],
 };
 
@@ -28,8 +31,8 @@ const ITERATOR = (min, max, target_array) => {
   ITERATOR(76, 85, S);
   ITERATOR(76, 85, S);
   ITERATOR(286, 295, S);
-  ITERATOR(256, 365, S);
-  ITERATOR(566, 576, S);
+  ITERATOR(356, 365, S);
+  ITERATOR(566, 575, S);
   ITERATOR(636, 645, S);
 
   const T1 = START.t1;
@@ -53,12 +56,12 @@ const ITERATOR = (min, max, target_array) => {
   ITERATOR(124, 133, T2);
 
   for (let letter in START) {
+    if (letter === 'all') {
+      break;
+    }
     START[letter].map((number) => {
-      console.log(number);
+      START.all.push(number);
     });
   }
 })();
-
-console.log('hi');
-// console.log(START.all);
-// export default START;
+export default START;
