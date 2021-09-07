@@ -46,6 +46,13 @@ const DESTROYER = {
   ],
 };
 
+const SUBMARINE = {
+  hull: [],
+  dark_gray: [760, 761, 830],
+  surrounding_water_dark: [],
+  surrounding_water_light: [],
+};
+
 (function carrier_ez_loader() {
   const OUTLINE = CARRIER.black_outline;
   ITERATOR(1376, 1380, OUTLINE);
@@ -110,4 +117,10 @@ const DESTROYER = {
   ITERATOR(1756, 1772, SURROUNDING_WATER_DARK);
 })();
 
-export { CARRIER, DESTROYER };
+(function submarine_ez_loader() {
+  const HULL = SUBMARINE.hull;
+  ITERATOR(897, 903, HULL);
+  ITERATOR(966, 974, HULL);
+})();
+
+export { CARRIER, DESTROYER, SUBMARINE };

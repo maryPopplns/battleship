@@ -30,14 +30,6 @@ body {
   background-color: #00006a;
 }
 
-.surrounding_water_dark {
-  background-color: #13138c;
-}
-
-.surrounding_water_light {
-  background-color: #2222b1;
-}
-
 .start {
   border: 1px solid black;
 }

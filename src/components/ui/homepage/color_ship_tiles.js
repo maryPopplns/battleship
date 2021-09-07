@@ -1,4 +1,4 @@
-import { CARRIER, DESTROYER } from './helpers/ship_tiles.js';
+import { CARRIER, DESTROYER, SUBMARINE } from './helpers/ship_tiles.js';
 import { EZ_TILE_COLORIZER } from './helpers/helpers.js';
 
 export default function color_ship_tiles() {
@@ -20,4 +20,8 @@ export default function color_ship_tiles() {
     DESTROYER.surrounding_water_light,
     'surrounding_water_light'
   );
+
+  EZ_TILE_COLORIZER(SUBMARINE.hull, 'ship_hull_outline');
+  EZ_TILE_COLORIZER(SUBMARINE.dark_gray, 'dark_gray');
+  EZ_TILE_COLORIZER(SUBMARINE.surrounding_water_dark, 'surrounding_water_dark');
 }
