@@ -1,0 +1,11 @@
+.ship {
+  border: none;
+}
+
+.ship_hull_outline {
+  background-color: black;
+}
+
+.ship_hull {
+  background-color: #9da29b;
+}

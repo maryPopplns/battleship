@@ -8,8 +8,8 @@ export default function color_start_tiles() {
     const ID = +tile.id.slice(6);
     const COLORED = START.all;
     if (COLORED.includes(ID)) {
-      tile.classList.add('start_text');
       tile.classList.remove('start_background');
+      tile.classList.add('start_text');
     }
   });
 }
