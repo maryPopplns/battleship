@@ -10,7 +10,7 @@ export default function color_ship_tiles() {
   CARRIER.hull.map((tile_id) => {
     const TILE = document.getElementById(tile_id);
     TILE.classList.remove('water');
-    TILE.classList.remove('tile');
+    // TILE.classList.remove('tile');
     TILE.classList.add('ship');
     TILE.classList.add('ship_hull');
   });
