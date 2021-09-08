@@ -1,4 +1,4 @@
-import START from './helpers/start_tiles.js';
+import START from './start_tiles.js';
 
 export default function color_start_tiles() {
   const ALL = START.all;

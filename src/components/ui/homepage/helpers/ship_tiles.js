@@ -49,8 +49,8 @@ const DESTROYER = {
 const SUBMARINE = {
   hull: [],
   dark_gray: [760, 830],
-  surrounding_water_dark: [],
-  surrounding_water_light: [],
+  left_periscope: [759],
+  right_periscope: [761],
 };
 
 (function carrier_ez_loader() {

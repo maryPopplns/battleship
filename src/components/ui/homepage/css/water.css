@@ -1,0 +1,39 @@
+@import './animator.css';
+
+:root {
+  --water: #010157;
+}
+
+.surrounding_water_dark {
+  background-color: #13138c;
+  animation: opacity 3s linear infinite;
+}
+
+.surrounding_water_light {
+  background-color: #2222b1;
+  animation: opacity 3s linear infinite;
+}
+
+.blue1 {
+  background: var(--water);
+}
+
+.blue2 {
+  background: var(--water);
+  opacity: 95%;
+}
+
+.blue3 {
+  background: var(--water);
+  opacity: 90%;
+}
+
+.blue4 {
+  background: var(--water);
+  opacity: 85%;
+}
+
+.blue5 {
+  background: var(--water);
+  opacity: 80%;
+}

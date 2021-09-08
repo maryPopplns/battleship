@@ -21,24 +21,16 @@
   background: #393939;
 }
 
-.surrounding_water_dark {
-  background-color: #13138c;
-}
-
-.surrounding_water_light {
-  background-color: #2222b1;
-}
-
 .sub {
   background: #1c1c1c;
 }
 
-.antenna_off {
+.periscope_off {
   border: none;
   background: #010157;
 }
 
-.antenna_on {
+.periscope_on {
   background: #393939;
 }
 
