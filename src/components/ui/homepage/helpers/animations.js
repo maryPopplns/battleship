@@ -1,4 +1,4 @@
-const ANIMATIONS = () => {
+const ANIMATIONS = (() => {
   const PERISCOPE_SPINNER = () => {
     const LEFT_TILE = document.getElementById(759);
     const RIGHT_TILE = document.getElementById(761);
@@ -58,13 +58,12 @@ const ANIMATIONS = () => {
       RIGHT_TILE.classList.remove('radar_off');
     }
   };
-};
 
-const INTERVALS = (() => {
   const SUB_ANIMATION = setInterval(PERISCOPE_SPINNER, 1000);
   const BOAT1 = setInterval(RADAR_SPINNER1, 1000);
   const BOAT2 = setInterval(RADAR_SPINNER2, 1500);
+
   return { SUB_ANIMATION, BOAT1, BOAT2 };
 })();
 
-export { ANIMATIONS, INTERVALS };
+export { ANIMATIONS };

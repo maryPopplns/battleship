@@ -1,3 +1,5 @@
+import { ANIMATIONS } from './animations.js';
+
 export default function listeners_handlers() {
   const START_BUTTON = document.getElementById('start_button');
 
@@ -35,7 +37,14 @@ export default function listeners_handlers() {
       tile.classList.remove('start_text_hovered');
     });
   };
+  const START_BUTTON_CLICK_HANDLER = () => {
+    for (let interval in ANIMATIONS) {
+      const INTERVAL = ANIMATIONS[interval];
+      clearInterval(INTERVAL);
+    }
+  };
 
   START_BUTTON.addEventListener('mouseenter', START_BUTTON_ENTER_HANDLER);
   START_BUTTON.addEventListener('mouseleave', START_BUTTON_LEAVE_HANDLER);
+  START_BUTTON.addEventListener('click', START_BUTTON_CLICK_HANDLER);
 }
