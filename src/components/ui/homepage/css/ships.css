@@ -1,4 +1,13 @@
 @import './animator.css';
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+.ship_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Black Ops One', cursive;
+  font-size: 0.5em;
+}
 
 .ship_hull_outline {
   background-color: black;

@@ -1,4 +1,4 @@
-export default function color_water() {
+export default function color_water_tiles() {
   const CLASSES = ['blue1', 'blue2', 'blue3', 'blue4', 'blue5'];
   const WATER_TILES = Array.from(document.getElementsByClassName('water'));
   WATER_TILES.map((tile) => {
