@@ -6,24 +6,12 @@ export default function render_tiles() {
   START.id = 'start_button';
   for (let i = 0; i < 2800; i++) {
     const TILE = document.createElement('div');
-    TILE.addEventListener('click', (e) => {
-      e.target.classList.add('temp');
-    });
-    TILE.addEventListener('dblclick', (e) => {
-      e.target.classList.remove('temp');
-    });
     TILE.id = i;
     TILE.classList = 'tile water';
     HEADING.append(TILE);
   }
   for (let i = 0; i < 700; i++) {
     const TILE = document.createElement('div');
-    TILE.addEventListener('click', (e) => {
-      e.target.classList.add('temp');
-    });
-    TILE.addEventListener('dblclick', (e) => {
-      e.target.classList.remove('temp');
-    });
     TILE.id = `start_${i}`;
     TILE.classList = 'tile start start_background';
     START.append(TILE);

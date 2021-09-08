@@ -29,6 +29,24 @@
   background-color: #2222b1;
 }
 
-.temp {
-  background: white;
+.sub {
+  background: #1c1c1c;
+}
+
+.antenna_off {
+  border: none;
+  background: #010157;
+}
+
+.antenna_on {
+  background: #393939;
+}
+
+.radar_off {
+  border: none;
+  background: #010157;
+}
+
+.radar_on {
+  background: #6c6c6c;
 }

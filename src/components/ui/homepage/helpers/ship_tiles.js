@@ -48,7 +48,7 @@ const DESTROYER = {
 
 const SUBMARINE = {
   hull: [],
-  dark_gray: [760, 761, 830],
+  dark_gray: [760, 830],
   surrounding_water_dark: [],
   surrounding_water_light: [],
 };
@@ -119,8 +119,7 @@ const SUBMARINE = {
 
 (function submarine_ez_loader() {
   const HULL = SUBMARINE.hull;
-  ITERATOR(897, 903, HULL);
-  ITERATOR(966, 974, HULL);
+  ITERATOR(898, 902, HULL);
 })();
 
 export { CARRIER, DESTROYER, SUBMARINE };
