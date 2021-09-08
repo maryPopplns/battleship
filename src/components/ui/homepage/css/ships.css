@@ -9,7 +9,7 @@
 }
 
 .ship_light {
-  background: #d52b2b;
+  background: #ff0000;
   animation: opacity 0.75s linear infinite;
 }
 
@@ -27,4 +27,8 @@
 
 .surrounding_water_light {
   background-color: #2222b1;
+}
+
+.temp {
+  background: white;
 }

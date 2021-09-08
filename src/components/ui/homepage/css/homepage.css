@@ -5,6 +5,10 @@ body {
   cursor: none;
 }
 
+.title {
+  background: black;
+}
+
 #bs_heading {
   display: grid;
   grid-template-columns: repeat(70, 1fr);
@@ -25,9 +29,13 @@ body {
   background: rgb(132, 255, 23);
 }
 
-.water {
+.tile {
   border: 1px solid black;
-  background-color: #00006a;
+}
+
+.water {
+  border: none;
+  background-color: #010157;
 }
 
 .start {

@@ -1,0 +1,57 @@
+import { ITERATOR } from './helpers.js';
+
+const BATTLESHIP = {
+  B: [150, 154, 220, 224, 360, 364, 430, 436, 434],
+  A: [156, 159, 226, 229, 366, 369, 436, 439, 506, 509],
+  T1: [162, 163, 232, 233, 302, 303, 372, 373, 442, 443, 512, 513],
+  T2: [167, 168, 237, 238, 307, 308, 377, 378, 447, 448, 517, 518],
+  L: [101, 171, 241, 311, 381, 451],
+  E: [176, 246, 386, 456],
+  S: [181, 251, 394, 464],
+  H: [116, 119, 186, 189, 256, 259, 396, 399, 466, 469, 536, 539],
+  I: [192, 193, 262, 263, 332, 333, 402, 403, 472, 473],
+  P: [196, 199, 266, 269, 406, 476, 546],
+};
+
+(function ez_loader() {
+  const B = BATTLESHIP.B;
+  ITERATOR(80, 84, B);
+  ITERATOR(290, 294, B);
+  ITERATOR(500, 504, B);
+
+  const A = BATTLESHIP.A;
+  ITERATOR(86, 89, A);
+  ITERATOR(296, 299, A);
+
+  const T1 = BATTLESHIP.T1;
+  ITERATOR(91, 94, T1);
+
+  const T2 = BATTLESHIP.T2;
+  ITERATOR(96, 99, T2);
+
+  const L = BATTLESHIP.L;
+  ITERATOR(521, 524, L);
+
+  const E = BATTLESHIP.E;
+  ITERATOR(106, 109, E);
+  ITERATOR(316, 318, E);
+  ITERATOR(526, 529, E);
+
+  const S = BATTLESHIP.S;
+  ITERATOR(111, 114, S);
+  ITERATOR(321, 324, S);
+  ITERATOR(531, 534, S);
+
+  const H = BATTLESHIP.H;
+  ITERATOR(326, 329, H);
+
+  const I = BATTLESHIP.I;
+  ITERATOR(121, 124, I);
+  ITERATOR(541, 544, I);
+
+  const P = BATTLESHIP.P;
+  ITERATOR(126, 129, P);
+  ITERATOR(336, 339, P);
+})();
+
+export default BATTLESHIP;

@@ -7,10 +7,10 @@ export default function render_tiles() {
   for (let i = 0; i < 2800; i++) {
     const TILE = document.createElement('div');
     TILE.addEventListener('click', (e) => {
-      e.target.classList.add('surrounding_water_light');
+      e.target.classList.add('temp');
     });
     TILE.addEventListener('dblclick', (e) => {
-      e.target.classList.remove('surrounding_water_light');
+      e.target.classList.remove('temp');
     });
     TILE.id = i;
     TILE.classList = 'tile water';
@@ -18,6 +18,12 @@ export default function render_tiles() {
   }
   for (let i = 0; i < 700; i++) {
     const TILE = document.createElement('div');
+    TILE.addEventListener('click', (e) => {
+      e.target.classList.add('temp');
+    });
+    TILE.addEventListener('dblclick', (e) => {
+      e.target.classList.remove('temp');
+    });
     TILE.id = `start_${i}`;
     TILE.classList = 'tile start start_background';
     START.append(TILE);

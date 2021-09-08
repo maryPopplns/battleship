@@ -23,5 +23,4 @@ export default function color_ship_tiles() {
 
   EZ_TILE_COLORIZER(SUBMARINE.hull, 'ship_hull_outline');
   EZ_TILE_COLORIZER(SUBMARINE.dark_gray, 'dark_gray');
-  EZ_TILE_COLORIZER(SUBMARINE.surrounding_water_dark, 'surrounding_water_dark');
 }
