@@ -6,6 +6,7 @@
 
 .ship_hull {
   background-color: #595555;
+  border: 1px solid #464242;
 }
 
 .ship_light {
@@ -15,14 +16,17 @@
 
 .light_gray {
   background: #6c6c6c;
+  border: 1px solid #464646;
 }
 
 .dark_gray {
   background: #393939;
+  border: 1px solid #292929;
 }
 
 .sub {
   background: #1c1c1c;
+  border: 1px solid #0f0f0f;
 }
 
 .periscope_off {
@@ -32,6 +36,7 @@
 
 .periscope_on {
   background: #393939;
+  border: 1px solid #292929;
 }
 
 .radar_off {
@@ -41,4 +46,5 @@
 
 .radar_on {
   background: #6c6c6c;
+  border: 1px solid #464646;
 }

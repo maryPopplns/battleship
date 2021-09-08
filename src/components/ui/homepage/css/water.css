@@ -6,12 +6,14 @@
 
 .surrounding_water_dark {
   background-color: #13138c;
-  animation: opacity 3s linear infinite;
+  border: 1px solid #0d0d61;
+  animation: opacity 2s linear infinite;
 }
 
 .surrounding_water_light {
   background-color: #2222b1;
-  animation: opacity 3s linear infinite;
+  border: 1px solid #171775;
+  animation: opacity 2s linear infinite;
 }
 
 .blue1 {

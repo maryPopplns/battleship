@@ -5,6 +5,10 @@ body {
   cursor: none;
 }
 
+main {
+  user-select: none;
+}
+
 .title {
   background: black;
 }
@@ -29,9 +33,9 @@ body {
   background: rgb(132, 255, 23);
 }
 
-.tile {
+/* .tile {
   border: 1px solid black;
-}
+} */
 
 .water {
   border: none;

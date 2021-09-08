@@ -59,15 +59,6 @@ export default function animations() {
     }
   };
 
-  (function water_flicker() {
-    const WATER_TILES = Array.from(document.getElementsByClassName('water'));
-    WATER_TILES.map((tile) => {
-      tile.classList.add('water_flicker');
-      // setTimeout(() => {
-      // }, 10);
-    });
-  })();
-
   const SUB_ANIMATION = setInterval(PERISCOPE_SPINNER, 1000);
   const BOAT1 = setInterval(RADAR_SPINNER1, 1000);
   const BOAT2 = setInterval(RADAR_SPINNER2, 1500);
