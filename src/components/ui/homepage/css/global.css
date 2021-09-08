@@ -50,6 +50,13 @@ main {
   background-color: black;
 }
 
+.start_background_hovered {
+  background-color: #ac971b;
+}
+
 .start_text {
   background-color: #ac971b;
+}
+.start_text_hovered {
+  background-color: black;
 }
