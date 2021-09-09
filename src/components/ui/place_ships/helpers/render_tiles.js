@@ -2,7 +2,6 @@ import COORDINATES from './coordinates';
 
 export default function render_tiles() {
   const MAIN = document.createElement('main');
-  const BACKGROUND = document.createElement('div');
   const PLACE_SHIPS_CONTAINER = document.createElement('div');
   const CLASSES = [
     'blue1',
@@ -19,7 +18,6 @@ export default function render_tiles() {
   ];
 
   MAIN.id = 'place_ships_main';
-  BACKGROUND.id = 'place_ships_background';
   PLACE_SHIPS_CONTAINER.id = 'place_ships_container';
 
   for (let i = 0; i < 3500; i++) {
@@ -27,7 +25,7 @@ export default function render_tiles() {
     const TILE = document.createElement('div');
     TILE.classList.add('place_ships_background_tile');
     TILE.classList.add(CLASSES[RANDOM_NUMBER]);
-    BACKGROUND.append(TILE);
+    MAIN.append(TILE);
   }
   for (let i = 0; i < 100; i++) {
     const TILE = document.createElement('div');
@@ -36,6 +34,5 @@ export default function render_tiles() {
     PLACE_SHIPS_CONTAINER.append(TILE);
   }
   document.body.append(MAIN);
-  MAIN.append(BACKGROUND);
-  BACKGROUND.append(PLACE_SHIPS_CONTAINER);
+  MAIN.append(PLACE_SHIPS_CONTAINER);
 }

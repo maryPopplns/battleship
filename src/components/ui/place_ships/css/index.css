@@ -1,13 +1,8 @@
-.place_ships_background_tile:hover {
+/* .place_ships_background_tile:hover {
   background: #84ff17;
-}
+} */
 
 #place_ships_main {
-  width: 70em;
-  height: 50em;
-}
-
-#place_ships_background {
   position: relative;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
@@ -30,4 +25,12 @@
 
 .place_ship_tile {
   border: 1px solid #ac971b;
+}
+
+/* .place_ship_tile:hover {
+  background: #84ff17;
+} */
+
+.place_ship_hovered {
+  background: #84ff17;
 }
