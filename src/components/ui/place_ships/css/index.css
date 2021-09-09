@@ -1,0 +1,16 @@
+#place_ships_main {
+  width: 70em;
+  height: 50em;
+}
+
+#place_ships_background {
+  display: grid;
+  grid-template-columns: repeat(70, 1fr);
+  grid-template-rows: repeat(50, 1fr);
+  width: 70em;
+  height: 50em;
+}
+
+.place_ships_background_tile:hover {
+  background: #84ff17;
+}

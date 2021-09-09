@@ -29,13 +29,9 @@ main {
   width: 70em;
 }
 
-.tile:hover {
-  background: rgb(132, 255, 23);
+.homepeage_tile:hover {
+  background: #84ff17;
 }
-
-/* .tile {
-  border: 1px solid black;
-} */
 
 .water {
   border: none;

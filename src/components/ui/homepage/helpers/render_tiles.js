@@ -8,7 +8,7 @@ export default function render_tiles() {
   for (let i = 0; i < 2800; i++) {
     const TILE = document.createElement('div');
     TILE.id = i;
-    TILE.classList = 'tile water';
+    TILE.classList = 'homepeage_tile water';
     HEADING.append(TILE);
   }
   for (let i = 0; i < 700; i++) {

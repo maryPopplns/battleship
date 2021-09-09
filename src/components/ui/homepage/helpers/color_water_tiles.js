@@ -11,11 +11,10 @@ export default function color_water_tiles() {
     'blue9',
     'blue10',
     'green1',
-    'green2',
   ];
   const WATER_TILES = Array.from(document.getElementsByClassName('water'));
   WATER_TILES.map((tile) => {
-    const RANDOM_NUMBER = Math.floor(Math.random() * 12);
+    const RANDOM_NUMBER = Math.floor(Math.random() * 11);
     tile.classList.add(CLASSES[RANDOM_NUMBER]);
   });
 }

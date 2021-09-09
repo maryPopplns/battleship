@@ -1,4 +1,5 @@
 import { ANIMATIONS } from './animations.js';
+import place_ships from '../../place_ships/place_ships.js';
 
 export default function listeners_handlers() {
   const START_BUTTON = document.getElementById('start_button');
@@ -43,8 +44,7 @@ export default function listeners_handlers() {
       clearInterval(INTERVAL);
     }
     document.getElementById('landing_page').remove();
-    //todo render place_ship
-    // MAKE NEW BRANCH
+    place_ships();
   };
 
   START_BUTTON.addEventListener('mouseenter', START_BUTTON_ENTER_HANDLER);
