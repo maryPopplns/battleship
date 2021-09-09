@@ -42,6 +42,9 @@ export default function listeners_handlers() {
       const INTERVAL = ANIMATIONS[interval];
       clearInterval(INTERVAL);
     }
+    document.getElementById('landing_page').remove();
+    //todo render place_ship
+    // MAKE NEW BRANCH
   };
 
   START_BUTTON.addEventListener('mouseenter', START_BUTTON_ENTER_HANDLER);

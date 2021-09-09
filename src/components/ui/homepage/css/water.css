@@ -1,7 +1,8 @@
 @import './animator.css';
 
 :root {
-  --water: #010157;
+  --water1: #010157;
+  --water2: #063744;
 }
 
 .surrounding_water_dark {
@@ -14,26 +15,60 @@
   border: 1px solid #171775;
 }
 
+.green1 {
+  background: var(--water2);
+  opacity: 60%;
+}
+
 .blue1 {
-  background: var(--water);
+  background: var(--water1);
 }
 
 .blue2 {
-  background: var(--water);
-  opacity: 95%;
+  background: var(--water1);
+  opacity: 96%;
 }
 
 .blue3 {
-  background: var(--water);
-  opacity: 90%;
+  background: var(--water1);
+  opacity: 92%;
 }
 
 .blue4 {
-  background: var(--water);
-  opacity: 85%;
+  background: var(--water1);
+  opacity: 88%;
 }
 
 .blue5 {
-  background: var(--water);
+  background: var(--water1);
+  opacity: 84%;
+}
+
+.blue6 {
+  background: var(--water1);
+  opacity: 80%;
+}
+
+.blue7 {
+  background: var(--water1);
+  opacity: 76%;
+}
+.blue8 {
+  background: var(--water1);
+  opacity: 72%;
+}
+
+.blue9 {
+  background: var(--water1);
+  opacity: 68%;
+}
+
+.blue10 {
+  background: var(--water1);
+  opacity: 64%;
+}
+
+.blue10 {
+  background: var(--water1);
   opacity: 80%;
 }

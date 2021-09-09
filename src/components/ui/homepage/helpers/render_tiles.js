@@ -2,6 +2,7 @@ export default function render_tiles() {
   const MAIN = document.createElement('main');
   const HEADING = document.createElement('div');
   const START = document.createElement('div');
+  MAIN.id = 'landing_page';
   HEADING.id = 'bs_heading';
   START.id = 'start_button';
   for (let i = 0; i < 2800; i++) {
