@@ -76,7 +76,7 @@ export default function color_ship_tiles() {
   })();
 
   (function submarine() {
-    EZ_TILE_COLORIZER(SUBMARINE.hull, 'sub');
+    // EZ_TILE_COLORIZER(SUBMARINE.hull, 'sub');
     EZ_TILE_COLORIZER(SUBMARINE.dark_gray, 'dark_gray');
     EZ_TILE_COLORIZER(SUBMARINE.left_periscope, 'periscope_on');
     EZ_TILE_COLORIZER(SUBMARINE.right_periscope, 'periscope_off');
