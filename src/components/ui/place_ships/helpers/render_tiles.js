@@ -32,9 +32,10 @@ export default function render_tiles() {
   for (let i = 0; i < 100; i++) {
     const TILE = document.createElement('div');
     TILE.id = COORDINATES[i];
+    TILE.classList.add('place_ship_tile');
     PLACE_SHIPS_CONTAINER.append(TILE);
   }
   document.body.append(MAIN);
   MAIN.append(BACKGROUND);
-  MAIN.append(PLACE_SHIPS_CONTAINER);
+  BACKGROUND.append(PLACE_SHIPS_CONTAINER);
 }
