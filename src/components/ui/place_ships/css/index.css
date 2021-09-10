@@ -17,14 +17,46 @@
   grid-template-rows: repeat(10, 1fr);
   position: absolute;
   left: 15em;
-  bottom: 5em;
+  bottom: 4em;
   height: 40em;
   width: 40em;
   border: 1px solid #ac971b;
 }
 
+#instructions_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 1em;
+  left: 29em;
+  width: 12em;
+  height: 3em;
+  background: #aa9f61;
+  border-radius: 0.125em;
+}
+
+#bkd_space {
+  display: flex;
+  justify-content: center;
+  width: 3.5em;
+  font-size: 1.8em;
+  box-shadow: 1px 1px 2px 2px #000000;
+}
+
+#instructions {
+  font-size: 1.1em;
+  font: monospace;
+}
+
 .place_ship_tile {
   border: 1px solid #ac971b;
+}
+
+.placed_tile {
+  border: 1px solid #e7ca29;
+  background: #ac971b;
 }
 
 .place_ship_hovered {

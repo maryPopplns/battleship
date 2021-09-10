@@ -85,13 +85,13 @@ export default function logic_listeners() {
   const MOUSE_ENTER_HANDLER = (event) => {
     const ID = event.target.id;
     const INBOUNDS = INBOUNDS_EVALUATOR(ID);
-    const ALL_TILES = SUBSEQUENT_TILES(ID);
-    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_TILES);
+    const ALL_COORDINATES = SUBSEQUENT_TILES(ID);
+    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_COORDINATES);
     if (!INBOUNDS || !ARE_SUBSEQUENT_SPACES_FREE) {
       event.target.classList.add('invalid_ship_placement');
       return;
     }
-    COLOR_TILES(ALL_TILES);
+    COLOR_TILES(ALL_COORDINATES);
     event.target.classList.add('place_ship_hovered');
   };
 
@@ -108,13 +108,20 @@ export default function logic_listeners() {
   const MOUSE_CLICK_HANDLER = (event) => {
     const ID = event.target.id;
     const INBOUNDS = INBOUNDS_EVALUATOR(ID);
-    const ALL_TILES = SUBSEQUENT_TILES(ID);
-    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_TILES);
+    const ALL_COORDINATES = SUBSEQUENT_TILES(ID);
+    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_COORDINATES);
 
     if (INBOUNDS && ARE_SUBSEQUENT_SPACES_FREE && current_ship_index < 5) {
       const CURRENT_SHIP = SHIPS[current_ship_index];
-      GAME.PLAYER1_GAMEBOARD.place_ship(CURRENT_SHIP, ALL_TILES);
+      GAME.PLAYER1_GAMEBOARD.place_ship(CURRENT_SHIP, ALL_COORDINATES);
+      // todo - render on screen where the ships were placed
+      ALL_COORDINATES.map((coordinate) => {
+        const TILE = document.getElementById(coordinate);
+        TILE.classList.add('placed_tile');
+      });
       current_ship_index = current_ship_index + 1;
+
+      // todo - check if current ship index is 4 if so remove from dom and place enemy ships
     }
   };
 
