@@ -75,19 +75,23 @@ export default function logic_listeners() {
     }
   };
 
+  const COLOR_TILES = (coordinates) => {
+    coordinates.map((coordinate) => {
+      const TILE = document.getElementById(coordinate);
+      TILE.classList.add('place_ship_hovered');
+    });
+  };
+
   const MOUSE_ENTER_HANDLER = (event) => {
     const ID = event.target.id;
     const INBOUNDS = INBOUNDS_EVALUATOR(ID);
-    if (!INBOUNDS) {
+    const ALL_TILES = SUBSEQUENT_TILES(ID);
+    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_TILES);
+    if (!INBOUNDS || !ARE_SUBSEQUENT_SPACES_FREE) {
       event.target.classList.add('invalid_ship_placement');
       return;
     }
-    const ALL_TILES = SUBSEQUENT_TILES(ID);
-    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_TILES);
-    console.log(ARE_ALL_FREE);
-    // if the coordinate is out of bounds or a ship is in that position make the tile red
-    // if the coordinate isnt out of bounds,
-
+    COLOR_TILES(ALL_TILES);
     event.target.classList.add('place_ship_hovered');
   };
 
