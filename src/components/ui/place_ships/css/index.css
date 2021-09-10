@@ -1,6 +1,6 @@
-/* .place_ships_background_tile:hover {
+.place_ships_background_tile:hover {
   background: #84ff17;
-} */
+}
 
 #place_ships_main {
   position: relative;
@@ -24,13 +24,13 @@
 }
 
 .place_ship_tile {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #ac971b;
 }
 
-/* .place_ship_tile:hover {
-  background: #84ff17;
-} */
-
 .place_ship_hovered {
-  background: #84ff17;
+  background: #ac971b;
 }
