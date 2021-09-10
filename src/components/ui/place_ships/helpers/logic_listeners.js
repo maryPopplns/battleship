@@ -26,11 +26,21 @@ export default function logic_listeners() {
     },
   };
 
-  const SUBSEQUENT_TILES = (id) => {
-    console.log(id);
-  };
+  // const SUBSEQUENT_TILES = (id) => {
+  //   console.log(id);
+  // };
+
   const INBOUNDS_DETERMINER = (id) => {
-    console.log(id);
+    let value_to_compare = '';
+    if (orientation === 'horizontal') {
+      value_to_compare = id[0];
+    }
+    if (orientation === 'vertical') {
+      value_to_compare = id[1];
+    }
+    console.log(orientation);
+    console.log(value_to_compare);
+    console.log('');
   };
 
   const MOUSE_ENTER_HANDLER = (event) => {
@@ -41,7 +51,7 @@ export default function logic_listeners() {
     // if the coordinate isnt out of bounds,
 
     event.target.classList.add('place_ship_hovered');
-    SUBSEQUENT_TILES(ID);
+    // SUBSEQUENT_TILES(ID);
   };
 
   const MOUSE_LEAVE_HANDLER = () => {
@@ -57,10 +67,23 @@ export default function logic_listeners() {
     current_ship_index = current_ship_index + 1;
   };
 
+  const KEY_PRESS_HANDLER = (event) => {
+    const KEY = event.key;
+    if (KEY === ' ' && orientation === 'horizontal') {
+      orientation = 'vertical';
+      return;
+    }
+    if (KEY === ' ' && orientation === 'vertical') {
+      orientation = 'horizontal';
+      return;
+    }
+  };
+
   const TILES = Array.from(document.getElementsByClassName('place_ship_tile'));
   TILES.map((tile) => {
     tile.addEventListener('mouseenter', MOUSE_ENTER_HANDLER);
     tile.addEventListener('mouseleave', MOUSE_LEAVE_HANDLER);
     tile.addEventListener('click', MOUSE_CLICK_HANDLER);
   });
+  document.body.addEventListener('keyup', KEY_PRESS_HANDLER);
 }

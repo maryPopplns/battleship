@@ -34,3 +34,7 @@
 .place_ship_hovered {
   background: #ac971b;
 }
+
+.invalid_ship_placement {
+  background: #f00;
+}
