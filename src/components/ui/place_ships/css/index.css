@@ -24,10 +24,6 @@
 }
 
 .place_ship_tile {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #ac971b;
 }
 

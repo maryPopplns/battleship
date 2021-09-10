@@ -6,7 +6,7 @@ export default function logic_listeners() {
   const SHIPS = ['carrier', 'battleship', 'destroyer', 'sub', 'patrolBoat'];
   const LENGTH = [5, 4, 3, 3, 2];
   const MAXS = {
-    //vertical is using charcodes to make this easier
+    // vertical is using charcodes
     carrier: {
       horizontal: 5,
       vertical: 102, // f
@@ -105,11 +105,20 @@ export default function logic_listeners() {
     event.target.classList.remove('invalid_ship_placement');
   };
 
-  const MOUSE_CLICK_HANDLER = () => {
-    current_ship_index = current_ship_index + 1;
+  const MOUSE_CLICK_HANDLER = (event) => {
+    const ID = event.target.id;
+    const INBOUNDS = INBOUNDS_EVALUATOR(ID);
+    const ALL_TILES = SUBSEQUENT_TILES(ID);
+    const ARE_SUBSEQUENT_SPACES_FREE = SPACE_TAKEN_EVALUATOR(ALL_TILES);
+
+    if (INBOUNDS && ARE_SUBSEQUENT_SPACES_FREE && current_ship_index < 5) {
+      const CURRENT_SHIP = SHIPS[current_ship_index];
+      GAME.PLAYER1_GAMEBOARD.place_ship(CURRENT_SHIP, ALL_TILES);
+      current_ship_index = current_ship_index + 1;
+    }
   };
 
-  const KEY_PRESS_HANDLER = (event) => {
+  const SPACE_BAR_HANDLER = (event) => {
     const KEY = event.key;
     if (KEY === ' ' && orientation === 'horizontal') {
       orientation = 'vertical';
@@ -127,5 +136,5 @@ export default function logic_listeners() {
     tile.addEventListener('mouseleave', MOUSE_LEAVE_HANDLER);
     tile.addEventListener('click', MOUSE_CLICK_HANDLER);
   });
-  document.body.addEventListener('keyup', KEY_PRESS_HANDLER);
+  document.body.addEventListener('keyup', SPACE_BAR_HANDLER);
 }
