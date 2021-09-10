@@ -4,3 +4,5 @@ import homepage from './components/ui/homepage/homepage.js';
 
 const GAME = gameloop();
 homepage();
+
+export { GAME };

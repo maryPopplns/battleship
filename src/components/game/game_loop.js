@@ -17,5 +17,5 @@ export default function gameloop() {
   });
   //todo remove boilerplate so ships can be manually placed
 
-  return { PLAYER1, PLAYER2 };
+  return { PLAYER1, PLAYER2, PLAYER1_GAMEBOARD, PLAYER2_GAMEBOARD };
 }
