@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 .place_ships_background_tile:hover {
   background: #84ff17;
 }
@@ -46,8 +48,8 @@
 }
 
 #instructions {
-  font-size: 1.1em;
-  font: monospace;
+  font-size: 1em;
+  font-family: 'Space Mono', monospace;
 }
 
 .place_ship_tile {

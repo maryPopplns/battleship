@@ -1,4 +1,5 @@
 import { GAME } from '../../../../index.js';
+import place_ai_ships from './place_ai_ships.js';
 
 export default function logic_listeners() {
   let current_ship_index = 0;
@@ -114,7 +115,6 @@ export default function logic_listeners() {
     if (INBOUNDS && ARE_SUBSEQUENT_SPACES_FREE && current_ship_index < 5) {
       const CURRENT_SHIP = SHIPS[current_ship_index];
       GAME.PLAYER1_GAMEBOARD.place_ship(CURRENT_SHIP, ALL_COORDINATES);
-      // todo - render on screen where the ships were placed
       ALL_COORDINATES.map((coordinate) => {
         const TILE = document.getElementById(coordinate);
         TILE.classList.add('placed_tile');
@@ -122,6 +122,11 @@ export default function logic_listeners() {
       current_ship_index = current_ship_index + 1;
 
       // todo - check if current ship index is 4 if so remove from dom and place enemy ships
+      if (current_ship_index > 4) {
+        const MAIN = document.getElementById('place_ships_main');
+        MAIN.remove();
+        place_ai_ships();
+      }
     }
   };
 

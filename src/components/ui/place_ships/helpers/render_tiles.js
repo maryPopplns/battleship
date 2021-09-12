@@ -25,7 +25,7 @@ export default function render_tiles() {
   INSTRUCTIONS_CONTAINER.id = 'instructions_container';
   INSTRUCTIONS.id = 'instructions';
   SPACE_KEY.id = 'bkd_space';
-  INSTRUCTIONS.innerText = 'to rotate ship';
+  INSTRUCTIONS.innerText = 'to rotate';
   SPACE_KEY.innerText = 'space';
 
   for (let i = 0; i < 3500; i++) {
