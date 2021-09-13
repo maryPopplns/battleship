@@ -1,0 +1,7 @@
+#game_boards {
+  display: grid;
+  grid-template-columns: repeat(70, 1fr);
+  grid-template-rows: repeat(50, 1fr);
+  height: 50em;
+  width: 70em;
+}

@@ -116,8 +116,4 @@ export default function place_ai_ships() {
       GAME.PLAYER2_GAMEBOARD.place_ship(ship, SHIP_POSITIONS);
     }
   })();
-  const SHIPS_TO_ITERATE = GAME.PLAYER2_GAMEBOARD.ships;
-  for (let ship in SHIPS_TO_ITERATE) {
-    console.log(SHIPS_TO_ITERATE[ship]);
-  }
 }
