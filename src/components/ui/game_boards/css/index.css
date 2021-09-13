@@ -1,4 +1,5 @@
 #game_boards {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
   grid-template-rows: repeat(50, 1fr);
@@ -8,4 +9,24 @@
 
 .gameboards_background:hover {
   background: #84ff17;
+}
+
+.game_board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 30em;
+  width: 30em;
+}
+
+.game_board_tile {
+  border: 1px solid white;
+}
+
+#board_container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 10em;
+  width: 70em;
 }

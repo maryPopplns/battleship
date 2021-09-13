@@ -1,4 +1,4 @@
-import COORDINATES from './coordinates';
+import COORDINATES from '../../../helpers/coordinates.js';
 
 export default function render_tiles() {
   const MAIN = document.createElement('main');
