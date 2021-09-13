@@ -5,3 +5,7 @@
   height: 50em;
   width: 70em;
 }
+
+.gameboards_background:hover {
+  background: #84ff17;
+}

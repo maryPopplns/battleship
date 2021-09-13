@@ -18,6 +18,7 @@ export default function render_background_tiles() {
   for (let i = 0; i < 3500; i++) {
     const RANDOM_NUMBER = Math.floor(Math.random() * 11);
     const TILE = document.createElement('div');
+    TILE.classList.add('gameboards_background');
     TILE.classList.add(CLASSES[RANDOM_NUMBER]);
     MAIN.append(TILE);
   }
