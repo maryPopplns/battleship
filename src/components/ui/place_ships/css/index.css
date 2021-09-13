@@ -4,12 +4,16 @@
   background: #84ff17;
 }
 
+body {
+  min-width: 70em;
+}
+
 #place_ships_main {
   position: relative;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
   grid-template-rows: repeat(50, 1fr);
-  width: 70em;
+  min-width: 70em;
   height: 50em;
 }
 

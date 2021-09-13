@@ -1,14 +1,18 @@
+.gameboards_background:hover {
+  background: #84ff17;
+}
+
+body {
+  min-width: 70em;
+}
+
 #game_boards {
-  position: relative;
+  position: absolute;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
   grid-template-rows: repeat(50, 1fr);
   height: 50em;
-  width: 70em;
-}
-
-.gameboards_background:hover {
-  background: #84ff17;
+  min-width: 70em;
 }
 
 .game_board {
@@ -23,10 +27,14 @@
   border: 1px solid white;
 }
 
-#board_container {
-  display: flex;
-  justify-content: space-around;
+#player_board {
   position: absolute;
   top: 10em;
-  width: 70em;
+  left: 2em;
+}
+
+#ai_board {
+  position: absolute;
+  top: 10em;
+  right: 2em;
 }
