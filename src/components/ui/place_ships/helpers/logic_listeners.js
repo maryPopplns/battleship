@@ -45,7 +45,7 @@ export default function logic_listeners() {
 
   const SPACE_TAKEN_EVALUATOR = (all_tiles) => {
     let are_all_taken = true;
-    const PLAYER1_SHIPS = GAME.PLAYER1_GAMEBOARD.ships;
+    const PLAYER1_SHIPS = GAME.RETURN_SHIPS(1);
     for (let ship in PLAYER1_SHIPS) {
       const POSITIONS = PLAYER1_SHIPS[ship].position;
       all_tiles.map((tile) => {
@@ -115,14 +115,13 @@ export default function logic_listeners() {
 
     if (INBOUNDS && ARE_SUBSEQUENT_SPACES_FREE && current_ship_index < 5) {
       const CURRENT_SHIP = SHIPS[current_ship_index];
-      GAME.PLAYER1_GAMEBOARD.place_ship(CURRENT_SHIP, ALL_COORDINATES);
+      GAME.PLACE_SHIP(1, CURRENT_SHIP, ALL_COORDINATES);
       ALL_COORDINATES.map((coordinate) => {
         const TILE = document.getElementById(coordinate);
         TILE.classList.add('placed_tile');
       });
       current_ship_index = current_ship_index + 1;
 
-      // todo - check if current ship index is 4 if so remove from dom and place enemy ships
       if (current_ship_index > 4) {
         const MAIN = document.getElementById('place_ships_main');
         MAIN.remove();

@@ -113,7 +113,7 @@ export default function place_ai_ships() {
   (function fill_ai_board() {
     for (let ship in INFO) {
       const SHIP_POSITIONS = INFO[ship].coordinates;
-      GAME.PLAYER2_GAMEBOARD.place_ship(ship, SHIP_POSITIONS);
+      GAME.PLACE_SHIP(2, ship, SHIP_POSITIONS);
     }
   })();
 }
