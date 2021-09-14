@@ -14,7 +14,9 @@ export default function render_gameboard_tiles() {
     const AI_BOARD_TILE = document.createElement('div');
 
     PLAYER_BOARD_TILE.classList.add('game_board_tile');
+    PLAYER_BOARD_TILE.classList.add('player_board');
     AI_BOARD_TILE.classList.add('game_board_tile');
+    AI_BOARD_TILE.classList.add('ai_board');
     PLAYER_BOARD_TILE.setAttribute('data-player-board', COORDINATES[i]);
     AI_BOARD_TILE.setAttribute('data-ai-board', COORDINATES[i]);
 

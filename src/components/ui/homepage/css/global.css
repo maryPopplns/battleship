@@ -1,8 +1,11 @@
+:root {
+  cursor: crosshair;
+}
+
 body {
   display: flex;
   justify-content: center;
   background-color: black;
-  cursor: none;
 }
 
 main {
@@ -27,10 +30,6 @@ main {
   grid-template-rows: repeat(10, 1fr);
   height: 10em;
   width: 70em;
-}
-
-.homepeage_tile:hover {
-  background: #84ff17;
 }
 
 .water {

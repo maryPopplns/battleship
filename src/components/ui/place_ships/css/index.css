@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-.place_ships_background_tile:hover {
-  background: #84ff17;
-}
-
 body {
   min-width: 70em;
 }
@@ -27,6 +23,7 @@ body {
   height: 40em;
   width: 40em;
   border: 1px solid #ac971b;
+  cursor: none;
 }
 
 #instructions_container {

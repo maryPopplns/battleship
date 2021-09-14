@@ -59,11 +59,33 @@ const ANIMATIONS = (() => {
     }
   };
 
+  const WATER_ANIMATION = () => {
+    const WATER_TILES = Array.from(document.getElementsByClassName('water'));
+    const CLASSES = [
+      'blue1',
+      'blue2',
+      'blue3',
+      'blue4',
+      'blue5',
+      'blue6',
+      'blue7',
+      'blue8',
+      'blue9',
+      'blue10',
+      'green1',
+    ];
+    WATER_TILES.map((tile) => {
+      const RANDOM_NUMBER = Math.floor(Math.random() * 11);
+      tile.classList = `homepeage_tile water ${CLASSES[RANDOM_NUMBER]}`;
+    });
+  };
+
   const SUB_ANIMATION = setInterval(PERISCOPE_SPINNER, 1000);
   const BOAT1 = setInterval(RADAR_SPINNER1, 1000);
   const BOAT2 = setInterval(RADAR_SPINNER2, 1500);
+  const WATER = setInterval(WATER_ANIMATION, 1000);
 
-  return { SUB_ANIMATION, BOAT1, BOAT2 };
+  return { SUB_ANIMATION, BOAT1, BOAT2, WATER };
 })();
 
 export { ANIMATIONS };

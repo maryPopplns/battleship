@@ -20,7 +20,7 @@ export default function gameloop() {
       return player2_gameboard.ships;
     }
   };
-  // todo, we are returning a specific instance of new Gameboard. need to create methods that interact with the gameboard
+
   const PLACE_SHIP = (board, ship, positions) => {
     if (board === 1) {
       player1_gameboard.place_ship(ship, positions);
@@ -33,8 +33,6 @@ export default function gameloop() {
   return {
     PLAYER1,
     PLAYER2,
-    player1_gameboard,
-    player2_gameboard,
     RESET,
     RETURN_SHIPS,
     PLACE_SHIP,

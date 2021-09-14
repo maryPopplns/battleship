@@ -1,7 +1,3 @@
-.gameboards_background:hover {
-  background: #84ff17;
-}
-
 body {
   min-width: 70em;
 }
@@ -25,6 +21,19 @@ body {
 
 .game_board_tile {
   border: 1px solid white;
+}
+
+.player_board {
+  border: 1px solid #6e6112;
+}
+
+.ai_board {
+  border: 1px solid #ac971b;
+  cursor: none;
+}
+
+.ai_board:hover {
+  background: #84ff17;
 }
 
 #player_board {
