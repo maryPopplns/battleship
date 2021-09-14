@@ -53,6 +53,8 @@ export default function gameloop() {
     }
   };
 
+  const WINNER = () => {};
+
   return {
     RESET,
     RETURN_SHIPS,

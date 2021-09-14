@@ -14,7 +14,8 @@ export default function event_listeners() {
 
     color_hits_misses('player', PLAYER1_HITS, PLAYER1_MISSES);
     color_hits_misses('ai', PLAYER2_HITS, PLAYER2_MISSES);
-    // todo render the colors for hit spaces and missed
+
+    //handle not placeing the hit if its already been clicked
   };
 
   AI_TILES.map((tile) => {

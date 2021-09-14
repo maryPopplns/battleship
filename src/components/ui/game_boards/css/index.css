@@ -53,17 +53,17 @@ body {
 }
 
 .player_hit {
-  background: #863d3d;
+  background: #863d3db4;
 }
 
 .ai_hit {
-  background: rgb(194, 46, 46);
+  background: #863d3d;
 }
 
 .player_miss {
-  background: #3d3b80;
+  background: #221b70a1;
 }
 
 .ai_miss {
-  background: rgb(66, 66, 218);
+  background: #221b70;
 }
