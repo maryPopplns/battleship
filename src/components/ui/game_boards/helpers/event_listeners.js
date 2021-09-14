@@ -3,22 +3,46 @@ import color_hits_misses from './color_hits_misses.js';
 
 export default function event_listeners() {
   const AI_TILES = Array.from(document.getElementsByClassName('ai_board'));
+
   const AI_TILE_CLICK_HANDLER = (event) => {
     const ID = event.target.id.slice(3);
-    GAME.ATTACK(ID);
+    if (
+      !GAME.RETURN_MISSES(2).includes(ID) &&
+      !GAME.RETURN_HITS(2).includes(ID)
+    ) {
+      GAME.ATTACK(ID);
+      color_hits_misses('player', GAME.RETURN_HITS(1), GAME.RETURN_MISSES(1));
+      color_hits_misses('ai', GAME.RETURN_HITS(2), GAME.RETURN_MISSES(2));
+    }
+  };
 
-    const PLAYER1_HITS = GAME.RETURN_HITS(1);
-    const PLAYER1_MISSES = GAME.RETURN_MISSES(1);
-    const PLAYER2_HITS = GAME.RETURN_HITS(2);
-    const PLAYER2_MISSES = GAME.RETURN_MISSES(2);
+  const AI_TILE_ENTER_HANDLER = (event) => {
+    const ID = event.target.id.slice(3);
+    const HITS = GAME.RETURN_HITS(2);
+    const MISSES = GAME.RETURN_MISSES(2);
+    const TILE = document.getElementById(`ai_${ID}`);
+    if (HITS.includes(ID) || MISSES.includes(ID)) {
+      TILE.classList.add('attacked_tile');
+    } else {
+      TILE.classList.add('ai_board_hover');
+    }
+  };
 
-    color_hits_misses('player', PLAYER1_HITS, PLAYER1_MISSES);
-    color_hits_misses('ai', PLAYER2_HITS, PLAYER2_MISSES);
-
-    //handle not placeing the hit if its already been clicked
+  const AI_TILE_LEAVE_HANDLER = (event) => {
+    const ID = event.target.id.slice(3);
+    const HITS = GAME.RETURN_HITS(2);
+    const MISSES = GAME.RETURN_MISSES(2);
+    const TILE = document.getElementById(`ai_${ID}`);
+    if (HITS.includes(ID) || MISSES.includes(ID)) {
+      TILE.classList.remove('attacked_tile');
+    } else {
+      TILE.classList.remove('ai_board_hover');
+    }
   };
 
   AI_TILES.map((tile) => {
     tile.addEventListener('click', AI_TILE_CLICK_HANDLER);
+    tile.addEventListener('mouseenter', AI_TILE_ENTER_HANDLER);
+    tile.addEventListener('mouseleave', AI_TILE_LEAVE_HANDLER);
   });
 }

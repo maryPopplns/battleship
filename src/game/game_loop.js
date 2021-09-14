@@ -53,7 +53,11 @@ export default function gameloop() {
     }
   };
 
-  const WINNER = () => {};
+  const WINNER = () => {
+    const BOARD1 = player1_gameboard.all_sunk();
+    const BOARD2 = player2_gameboard.all_sunk();
+    return { BOARD1, BOARD2 };
+  };
 
   return {
     RESET,

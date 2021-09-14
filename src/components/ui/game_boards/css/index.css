@@ -32,7 +32,7 @@ body {
   cursor: none;
 }
 
-.ai_board:hover {
+.ai_board_hover {
   background: #84ff17;
 }
 
@@ -66,4 +66,8 @@ body {
 
 .ai_miss {
   background: #221b70;
+}
+
+.attacked_tile {
+  background: #f00;
 }
