@@ -2,7 +2,7 @@
  BATTLESHIP
 </h1>
 
-<h  >
+<h2 >
  LEARNED
 </h2>
 
