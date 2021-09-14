@@ -51,3 +51,19 @@ body {
 .placed_ship_tile {
   background: #8b7b159b;
 }
+
+.player_hit {
+  background: #863d3d;
+}
+
+.ai_hit {
+  background: rgb(194, 46, 46);
+}
+
+.player_miss {
+  background: #3d3b80;
+}
+
+.ai_miss {
+  background: rgb(66, 66, 218);
+}

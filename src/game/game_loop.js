@@ -35,10 +35,30 @@ export default function gameloop() {
     PLAYER2.ai_attack(player1_gameboard);
   };
 
+  const RETURN_HITS = (board) => {
+    if (board === 1) {
+      return player1_gameboard.hits;
+    }
+    if (board === 2) {
+      return player2_gameboard.hits;
+    }
+  };
+
+  const RETURN_MISSES = (board) => {
+    if (board === 1) {
+      return player1_gameboard.misses;
+    }
+    if (board === 2) {
+      return player2_gameboard.misses;
+    }
+  };
+
   return {
     RESET,
     RETURN_SHIPS,
     PLACE_SHIP,
     ATTACK,
+    RETURN_HITS,
+    RETURN_MISSES,
   };
 }
