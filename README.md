@@ -1,8 +1,10 @@
-<p align="center">
-# BATTLESHIP
-</p>
+<h1 align="center" >
+ BATTLESHIP
+</h1>
 
-## LEARNED
+<h  >
+ LEARNED
+</h2>
 
 - TDD approach to programming
 - the importance of using pure functions within tests and how that can improve the modularity,easy of refactoring, and reduce bugs within code.
