@@ -30,11 +30,15 @@ export default function gameloop() {
     }
   };
 
+  const ATTACK = (coordinate) => {
+    PLAYER1.human_attack(player2_gameboard, coordinate);
+    PLAYER2.ai_attack(player1_gameboard);
+  };
+
   return {
-    PLAYER1,
-    PLAYER2,
     RESET,
     RETURN_SHIPS,
     PLACE_SHIP,
+    ATTACK,
   };
 }

@@ -1,5 +1,5 @@
 import './index.css';
-import gameloop from './components/game/GAME_LOOP.js';
+import gameloop from './game/game_loop.js';
 import homepage from './components/ui/homepage/homepage.js';
 
 const GAME = gameloop();

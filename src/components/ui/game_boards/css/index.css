@@ -47,3 +47,7 @@ body {
   top: 10em;
   right: 2em;
 }
+
+.placed_ship_tile {
+  background: #8b7b159b;
+}

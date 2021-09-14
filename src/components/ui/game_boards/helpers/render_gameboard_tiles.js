@@ -15,10 +15,10 @@ export default function render_gameboard_tiles() {
 
     PLAYER_BOARD_TILE.classList.add('game_board_tile');
     PLAYER_BOARD_TILE.classList.add('player_board');
+    PLAYER_BOARD_TILE.id = `player_${COORDINATES[i]}`;
     AI_BOARD_TILE.classList.add('game_board_tile');
     AI_BOARD_TILE.classList.add('ai_board');
-    PLAYER_BOARD_TILE.setAttribute('data-player-board', COORDINATES[i]);
-    AI_BOARD_TILE.setAttribute('data-ai-board', COORDINATES[i]);
+    AI_BOARD_TILE.id = `ai_${COORDINATES[i]}`;
 
     PLAYER_BOARD.append(PLAYER_BOARD_TILE);
     AI_BOARD.append(AI_BOARD_TILE);
