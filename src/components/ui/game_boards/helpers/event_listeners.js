@@ -1,4 +1,5 @@
 import { GAME } from '../../../../index.js';
+import render_end_game_scren from '../../end_game/render_end_game_screen.js';
 import color_hits_misses from './color_hits_misses.js';
 
 export default function event_listeners() {
@@ -13,6 +14,12 @@ export default function event_listeners() {
       GAME.ATTACK(ID);
       color_hits_misses('player', GAME.RETURN_HITS(1), GAME.RETURN_MISSES(1));
       color_hits_misses('ai', GAME.RETURN_HITS(2), GAME.RETURN_MISSES(2));
+      const WINNER = GAME.WINNER();
+      if (WINNER !== undefined) {
+        const MAIN = document.getElementById('game_boards');
+        MAIN.remove();
+        render_end_game_scren(WINNER);
+      }
     }
   };
 
