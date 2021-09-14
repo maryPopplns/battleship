@@ -2,12 +2,14 @@ import Gameboard from './gameboard.js';
 import Player from './player.js';
 
 export default function gameloop() {
-  const PLAYER1 = new Player('human');
-  const PLAYER2 = new Player('ai');
+  let player1 = new Player('human');
+  let player2 = new Player('ai');
   let player1_gameboard = new Gameboard();
   let player2_gameboard = new Gameboard();
 
   const RESET = function () {
+    player1 = new Player('human');
+    player2 = new Player('ai');
     player1_gameboard = new Gameboard();
     player2_gameboard = new Gameboard();
   };
@@ -31,8 +33,8 @@ export default function gameloop() {
   };
 
   const ATTACK = (coordinate) => {
-    PLAYER1.human_attack(player2_gameboard, coordinate);
-    PLAYER2.ai_attack(player1_gameboard);
+    player1.human_attack(player2_gameboard, coordinate);
+    player2.ai_attack(player1_gameboard);
   };
 
   const RETURN_HITS = (board) => {

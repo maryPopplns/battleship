@@ -67,14 +67,14 @@ body {
 }
 
 .ai_miss {
-  background: #221b70;
+  background: #2b219b;
 }
 
 .attacked_tile {
   background: #f00;
 }
 
-#winner_message {
+.winner_message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,4 +86,10 @@ body {
   height: 2em;
   width: 14em;
   background: #ac971b;
+}
+
+.winner_message_highlighted {
+  font-family: 'Space Mono', monospace;
+  background: black;
+  color: #ac971b;
 }
