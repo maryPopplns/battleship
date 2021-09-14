@@ -1,4 +1,6 @@
+<p align="center">
 # BATTLESHIP
+</p>
 
 ## LEARNED
 
