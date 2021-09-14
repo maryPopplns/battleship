@@ -1,7 +1,13 @@
-# battleship
+# BATTLESHIP
 
--learned the TDD approach to programming
--learned the importance of using pure functions within tests and how that can improve the modularity,easy of refactoring, and reduce bugs within code.
--learned how to use mock functions and spyons.
--I specifially used spy ons to determine whether the outgoing messages from my classes were sending the correct data
--got a better undetstanding of what modules to test, how to test them
+## LEARNED
+
+- TDD approach to programming
+- the importance of using pure functions within tests and how that can improve the modularity,easy of refactoring, and reduce bugs within code.
+- how to use mock functions and spyons.
+- got a better understanding of testing objects
+  - incoming query messages - test the result
+  - incoming command messages - test the public side effects
+  - ignore internal messages and commands **_UNLESS ITS SAVES YOU TIME AND MONEY_**
+  - ignore outgoing query messages
+  - outgoing command messages - test if the other object recieved the command **_THIS REQUIRES MOCKS_**
