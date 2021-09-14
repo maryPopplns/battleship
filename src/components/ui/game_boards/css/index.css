@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
 body {
   min-width: 70em;
 }
 
 #game_boards {
-  position: absolute;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(70, 1fr);
   grid-template-rows: repeat(50, 1fr);
@@ -70,4 +72,18 @@ body {
 
 .attacked_tile {
   background: #f00;
+}
+
+#winner_message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 11.5em;
+  left: 10.5em;
+  font-size: 2em;
+  font-family: 'Space Mono', monospace;
+  height: 2em;
+  width: 14em;
+  background: #ac971b;
 }

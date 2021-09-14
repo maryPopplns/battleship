@@ -57,13 +57,13 @@ export default function gameloop() {
     const BOARD1 = player1_gameboard.all_sunk();
     const BOARD2 = player2_gameboard.all_sunk();
     if (BOARD1 && BOARD2) {
-      return "It's a tie";
+      return "IT'S A TIE!";
     }
     if (BOARD1) {
-      return 'You are the winner!';
+      return 'YOU LOSE!';
     }
     if (BOARD2) {
-      return 'You lose!';
+      return 'YOU ARE THE WINNER!';
     }
   };
 

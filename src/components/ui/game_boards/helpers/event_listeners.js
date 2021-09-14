@@ -1,6 +1,6 @@
 import { GAME } from '../../../../index.js';
-import render_end_game_scren from '../../end_game/render_end_game_screen.js';
 import color_hits_misses from './color_hits_misses.js';
+import render_game_over_message from './render_game_over_message.js';
 
 export default function event_listeners() {
   const AI_TILES = Array.from(document.getElementsByClassName('ai_board'));
@@ -16,9 +16,13 @@ export default function event_listeners() {
       color_hits_misses('ai', GAME.RETURN_HITS(2), GAME.RETURN_MISSES(2));
       const WINNER = GAME.WINNER();
       if (WINNER !== undefined) {
-        const MAIN = document.getElementById('game_boards');
-        MAIN.remove();
-        render_end_game_scren(WINNER);
+        AI_TILES.map((tile) => {
+          tile.removeEventListener('click', AI_TILE_CLICK_HANDLER);
+          tile.removeEventListener('mouseenter', AI_TILE_ENTER_HANDLER);
+          tile.removeEventListener('mouseleave', AI_TILE_LEAVE_HANDLER);
+          tile.style.cursor = 'crosshair';
+        });
+        render_game_over_message(WINNER);
       }
     }
   };

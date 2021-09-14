@@ -80,9 +80,9 @@ const ANIMATIONS = (() => {
     });
   };
 
-  const SUB_ANIMATION = setInterval(PERISCOPE_SPINNER, 1000);
-  const BOAT1 = setInterval(RADAR_SPINNER1, 1000);
-  const BOAT2 = setInterval(RADAR_SPINNER2, 1500);
+  const SUB_ANIMATION = setInterval(PERISCOPE_SPINNER, 900);
+  const BOAT1 = setInterval(RADAR_SPINNER1, 1100);
+  const BOAT2 = setInterval(RADAR_SPINNER2, 1300);
   const WATER = setInterval(WATER_ANIMATION, 1000);
 
   return { SUB_ANIMATION, BOAT1, BOAT2, WATER };
