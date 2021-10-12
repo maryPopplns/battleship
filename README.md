@@ -16,3 +16,11 @@
   - ignore outgoing query messages
   - outgoing command messages - test if the other object recieved the command **_THIS REQUIRES MOCKS_**
   - for more information https://bit.ly/3Aj9T1W
+
+<h2 >
+ TECNOLOGIES
+</h2>
+
+- Javascript
+- HTML
+- CSS
