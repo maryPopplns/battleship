@@ -24,5 +24,3 @@
 </h2>
 
 - Javascript
-- HTML
-- CSS
